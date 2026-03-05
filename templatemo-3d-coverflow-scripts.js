@@ -388,3 +388,8 @@ https://templatemo.com/tm-595-3d-coverflow
         updateCoverflow();
         container.focus();
         startAutoplay();
+
+    const staffRatings = [
+    { total: 0, count: 0 },
+    { total: 0, count: 0 }
+];

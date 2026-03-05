@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lander University Food Program - Staff</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="templatemo-3d-coverflow.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="#home" class="logo-container">
+            <div class="logo">
+                <img src="images/logos/LanderLogo.png" width="50" height="50">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#e4dd00e2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 17.5 50)" />
+                <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">Lander University Food Program - Staff</div>
+        </a>
+
+        <nav class="main-menu" id="mainMenu">
+            <a href="index.html" class="menu-item">Home</a>
+            <a href="#about" class="menu-item">About</a>
+            <a href="#contact" class="menu-item">Contact</a>
+            <a href="staff.html" class="menu-item active">Staff</a>
+            <a href="calendar.html" class="menu-item">calendar</a>
+            <a href="https://github.com/RedInfinityPro/Tower-Daniel-Webiste" target="_blank" rel="noopener noreferrer"
+                class="menu-item external">GitHub</a>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="staff-section">
+        <div class="staff-list">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search...">
+                <div class="filter-container">
+                <div class="dropdown">
+                    <button><i class="fas fa-filter"></i> Filter</button>
+                    <div class="content">
+                        <a href="#"><i class="fas fa-sort-alpha-down"></i> Name: A-Z</a>
+                        <a href="#"><i class="fas fa-sort-alpha-up"></i> Name: Z-A</a>
+                        <a href="#"><i class="fas fa-sort-alpha-down"></i> Career: A-Z</a>
+                        <a href="#"><i class="fas fa-sort-alpha-up"></i> Career: Z-A</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Staff Member -->
+            <div class="staff-card" data-staff="0">
+                <div class="staff-info">
+                    <h2>Brantlee Coward</h2>
+                    <p>Director of Dining Services. Oversees campus dining operations and ensures students receive
+                        quality meals and service.</p>
+                </div>
+
+                <div class="staff-image">
+                    <img src="images/staff1.jpg" alt="Staff Member">
+                </div>
+            </div>
+
+            <div class="staff-card" data-staff="1">
+                <div class="staff-info">
+                    <h2>Kristin Brannon</h2>
+                    <p>Office Manager and Meal Plan Specialist. Assists students with meal plans, purchases, and
+                        support.</p>
+                </div>
+
+                <div class="staff-image">
+                    <img src="images/staff2.jpg" alt="Staff Member">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
