@@ -1,0 +1,361 @@
+@charset "utf-8";
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .restaurant-menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .restaurant-item {
+            color: rgba(0, 0, 0, 0.85);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .restaurant-item:hover {
+            color: #FFD700;
+            transform: translateY(-2px);
+        }
+
+        .restaurant-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #ffffff);
+            transition: width 0.3s ease;
+        }
+
+        .restaurant-item:hover::after {
+            width: 100%;
+        }
+
+        .restaurant-item.active {
+            color: #FFD700;
+        }
+
+        .restaurant-item.active::after {
+            width: 100%;
+        }
+
+        .restaurant-item.external::before {
+            content: '↗';
+            margin-right: 5px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .staff-section {
+            min-height: 100vh;
+            padding: 140px 40px 60px 40px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
+        }
+
+        .staff-list {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .staff-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:  linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            user-select: none;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+
+        .staff-info {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .staff-info h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .staff-info p {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 15px;
+        }
+
+        .staff-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .staff-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .search-container {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .search-input {
+            padding: 10px 15px 10px 40px;
+            border: 1px solid #444;
+            border-radius: 20px;
+            font-size: var(--font-size);
+            color: var(--text-color);
+            outline: none;
+        }
+
+        .search-icon {
+            position: relative;
+            left: 30px;
+            bottom: -8px;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .filter-container {
+            position: relative;
+            left: 40%;
+            top: -39px;
+            height: auto;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .dropdown button {
+            background: var(--button-gradient);
+            color: #000000;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-family: var(--font-family);
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .dropdown button i {
+            margin-right: 8px;
+        }
+
+        .dropdown button:hover {
+            background: var(--button-hover);
+        }
+
+        .dropdown button:active {
+            transform: translateY(1px);
+        }
+
+        .dropdown .content {
+            display: none;
+            position: absolute;
+            background: #333;
+            border-radius: 6px;
+            padding: 10px 0;
+            top: 100%;
+            left: 0;
+            z-index: 1001;
+            min-width: 180px;
+            box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+        }
+
+        .dropdown .content a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: var(--font-family);
+            font-weight: 500;
+        }
+
+        .dropdown .content a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .dropdown .content a:hover {
+            background: gray;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        .calendar-section {
+            min-height: 100vh;
+            padding: 140px 40px 60px 40px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
+        }
+
+        .calendar-list {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .calendar-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:  linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            user-select: none;
+        }
+
+        .calendar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+
+        .calendar-info {
+            flex: 1;
+            padding-right: 30px;
+            text-align: center;
+        }
+
+        .calendar-info h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .calendar-info p {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 15px;
+        }
+
+        .event-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .food-section {
+            min-height: 100vh;
+            padding: 140px 40px 60px 40px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
+        }
+        
+        .food-list {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .food-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:  linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            user-select: none;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+
+        .food-info {
+            flex: 1;
+            padding-right: 30px;
+            text-align: center;
+        }
+
+        .food-info h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .food-info p {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 15px;
+        }
+
+        .food-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .food-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }

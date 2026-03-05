@@ -1,0 +1,31 @@
+{
+    "Starbucks": [
+        {"Name":"peppermint mocha cheme frapp", "Types":"Grande & Tall", "Price": "5.95", "Image": "", "Allergy Note":""},
+        {"Name":"Coffee Espresso FRAP", "Types":"Tall & Grande & Venti", "Price": "$5.25", "Image":"", "Allergy Note":""},
+        {"Name":"coffee FRAPPE", "Types":"Tall & Grande & Venti", "Price": "$4.95", "Image":"", "Allergy Note":""}
+    ],
+    "Chick-fil-a": [
+        {"Name":"Grilled nugget 12-count", "Types":"12-count", "Price":"$8.69", "Image":"", "Allergy Note":""},
+        {"Name":"8 Count fried Nuggets", "Types":"8 count", "Price": "$5.35", "Image":"", "Allergy Note":""},
+        {"Name":"Nuggets 8-Count meal", "Types":"8 count", "Price": "$9.45", "Image":"", "Allergy Note":""}
+    ],
+    "Freshens": [
+        {"Name":"Freshens", "Types":"", "Price": "$1.49", "Image": "", "Allergy Note":""},
+        {"Name":"RB BAJA QUESO", "Types":"", "Price": "$7.99", "Image":"", "Allergy Note":""},
+        {"Name":"RB Buffalo", "Types":"", "Price": "$7.99", "Image":"", "Allergy Note":""}
+    ],
+    "TheDrop": [
+        {"Name":"Double Burger and cheese", "Types":"", "Price": "$9.09", "Image":"", "Allergy Note":""},
+        {"Name":"Burger and bacon and cheese", "Types":"", "Price": "$7.69", "Image":"", "Allergy Note":""},
+        {"Name":"Burger and avocado and pepperjack", "Types":"", "Price": "$7.69", "Image":"", "Allergy Note":""}
+    ],
+    "Dining Hall": [
+
+    ],
+    "Greenwood Market place": [
+
+    ],
+    "Food Pantry": [
+        
+    ]
+}

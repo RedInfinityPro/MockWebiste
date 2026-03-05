@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="templatemo-3d-coverflow.css" rel="stylesheet">
+    <link href="src/css/index-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,13 +32,13 @@
         </a>
 
         <nav class="main-menu" id="mainMenu">
-            <a href="index.html" class="menu-item active">Home</a>
-            <a href="#about" class="menu-item">About</a>
-            <a href="#contact" class="menu-item">Contact</a>
+            <a href="index.html#home" class="menu-item active">Home</a>
+            <a href="index.html#about" class="menu-item">About</a>
+            <a href="index.html#contact" class="menu-item">Contact</a>
+            <a href="foodMenu.html" class="menu-item">Food Menu</a>
+            <a href="calendar.html" class="menu-item">Calendar</a>
             <a href="staff.html" class="menu-item">Staff</a>
-            <a href="calendar.html" class="menu-item">calendar</a>
-            <a href="https://github.com/RedInfinityPro/Tower-Daniel-Webiste" target="_blank" rel="noopener noreferrer"
-                class="menu-item external">GitHub</a>
+            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
         </nav>
 
         <div class="menu-toggle" id="menuToggle">
@@ -63,43 +62,43 @@
                 <div class="coverflow" id="coverflow">
                     <div class="coverflow-item" data-index="0">
                         <div class="cover image-loading">
-                            <img src="images/assets/DiningHallImage.png" alt="The Underground in Grier Center" loading="lazy">
+                            <img src="images/coverflow-images/DiningHallImage.png" alt="The Underground in Grier Center" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="1">
                         <div class="cover image-loading">
-                            <img src="images/assets/Chick-fil-a-logo.png" alt="Chick-fil-A" loading="lazy">
+                            <img src="images/coverflow-images/Chick-fil-a-logo.png" alt="Chick-fil-A" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="2">
                         <div class="cover image-loading">
-                            <img src="images/assets/TheDropImage.png" alt="The Drop" loading="lazy">
+                            <img src="images/coverflow-images/TheDropImage.png" alt="The Drop" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="3">
                         <div class="cover image-loading">
-                            <img src="images/assets/FreshensImage.png" alt="Freshens" loading="lazy">
+                            <img src="images/coverflow-images/FreshensImage.png" alt="Freshens" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="4">
                         <div class="cover image-loading">
-                            <img src="images/assets/starbucksLogo.png" alt="Starbucks" loading="lazy">
+                            <img src="images/coverflow-images/starbucksLogo.png" alt="Starbucks" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="5">
                         <div class="cover image-loading">
-                            <img src="images/assets/GreenwoodMarketplaceImage.png" alt="Greenwood Marketplace" loading="lazy">
+                            <img src="images/coverflow-images/GreenwoodMarketplaceImage.png" alt="Greenwood Marketplace" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="5">
                         <div class="cover image-loading">
-                            <img src="images/assets/FoodPantryImage.jpg" alt="Bear Necessities Food Pantry" loading="lazy">
+                            <img src="images/coverflow-images/FoodPantryImage.jpg" alt="Bear Necessities Food Pantry" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
@@ -248,7 +247,7 @@
             <div class="about-bottom-row">
                 <div class="about-image-panel">
                     <div class="about-image-panel-inner">
-                        <img src="images/assets/AppImage.png" alt="Dining Experience at Lander" />
+                        <img src="images/about-images/AppImage.png" alt="Dining Experience at Lander" />
                         <div class="about-image-overlay">
                             <span>Download for free</span>
                         </div>
@@ -449,7 +448,7 @@
     <div class="scroll-to-top" id="scrollToTop">
         <span>↑</span>
     </div>
-    <script src="templatemo-3d-coverflow-scripts.js"></script>
+    <script src="src/js/index-script.js"></script>
 </body>
 
 </html>

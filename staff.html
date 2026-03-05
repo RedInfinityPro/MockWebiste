@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="templatemo-3d-coverflow.css" rel="stylesheet">
+    <link href="src/css/index-style.css" rel="stylesheet">
+    <link href="src/css/otherPages-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,13 +34,13 @@
         </a>
 
         <nav class="main-menu" id="mainMenu">
-            <a href="index.html" class="menu-item">Home</a>
-            <a href="#about" class="menu-item">About</a>
-            <a href="#contact" class="menu-item">Contact</a>
+            <a href="index.html#home" class="menu-item">Home</a>
+            <a href="index.html#about" class="menu-item">About</a>
+            <a href="index.html#contact" class="menu-item">Contact</a>
+            <a href="foodMenu.html" class="menu-item">Food Menu</a>
+            <a href="calendar.html" class="menu-item">Calendar</a>
             <a href="staff.html" class="menu-item active">Staff</a>
-            <a href="calendar.html" class="menu-item">calendar</a>
-            <a href="https://github.com/RedInfinityPro/Tower-Daniel-Webiste" target="_blank" rel="noopener noreferrer"
-                class="menu-item external">GitHub</a>
+            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
         </nav>
 
         <div class="menu-toggle" id="menuToggle">
@@ -66,29 +67,28 @@
                 </div>
             </div>
             <!-- Staff Member -->
-            <div class="staff-card" data-staff="0">
-                <div class="staff-info">
-                    <h2>Brantlee Coward</h2>
-                    <p>Director of Dining Services. Oversees campus dining operations and ensures students receive
-                        quality meals and service.</p>
-                </div>
-
-                <div class="staff-image">
-                    <img src="images/staff1.jpg" alt="Staff Member">
-                </div>
-            </div>
-
-            <div class="staff-card" data-staff="1">
-                <div class="staff-info">
-                    <h2>Kristin Brannon</h2>
-                    <p>Office Manager and Meal Plan Specialist. Assists students with meal plans, purchases, and
-                        support.</p>
-                </div>
-
-                <div class="staff-image">
-                    <img src="images/staff2.jpg" alt="Staff Member">
-                </div>
-            </div>
         </div>
     </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                © 2025 3D Coverflow. All rights reserved. | Designed by <a href="https://templatemo.com" target="_blank"
+                    rel="noopener noreferrer">TemplateMo</a>
+            </div>
+            <div class="footer-links">
+                <a href="#privacy" onclick="event.preventDefault(); alert('Privacy Policy page would go here');">Privacy
+                    Policy</a>
+                <a href="#terms" onclick="event.preventDefault(); alert('Terms of Service page would go here');">Terms
+                    of Service</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <span>↑</span>
+    </div>
+    <script src="src/js/index-script.js"></script>\
+    <script src="src/js/load-staff.js"></script>
 </body>

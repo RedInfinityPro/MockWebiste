@@ -1,0 +1,32 @@
+{
+    "2026": [
+        {"Name":"Food & Ideas Festival", "Day":"Mar 21-22, 2026", "About": "The second annual festival expanded to include a student start-up food market, a school outreach programme, and a live cook-off between faculty heads. Ticket pre-sales exceeded last year's total attendance within 48 hours of opening.", "Image": "images/events/amhnasim-cookies-7724642_1920.jpg"},
+        {"Name":"Love & Dough: Valentine's Doughnut Design-Off", "Day":"Feb 14, 2026", "About": "Students competed to create the most creative glazed doughnut in honour of Valentine's Day. Entries ranged from anatomically accurate heart-shaped glazes to a surprisingly moving abstract design titled 'Long Distance.' 900 doughnuts were made and sold.", "Image":""},
+        {"Name":"Olive Oil Masterclass with the Mediterranean Society", "Day":"Jan 17, 2026", "About": "A sold-out tasting and cooking workshop led by a visiting producer from Crete. Participants sampled 12 single-origin oils and learned to cook three dishes pairing different varieties. Waiting list of 180 for the next session.", "Image":""}
+    ],
+    "2025": [
+        {"Name":"Bearcat Dining", "Day":"Oct 3, 2025", "About": "The National University Catering Association awarded Lander University its highest honour, citing food sustainability initiatives, cultural diversity of menus, and student co-creation programmes. Head of Dining Services, Lander University, accepted the award at the ceremony.", "Image":""},
+        {"Name":"Bearcat Farmers' Market Turns 3 — Expansion Announcement", "Day":"Jul 12, 2025", "About": "The monthly market celebrated its third year and announced expansion to a weekly format, with 6 new permanent student vendor licences created to support student food entrepreneurs. Total revenue passed $120,000 since launch.", "Image":""},
+        {"Name":"Snap & Savour: Student Food Photography Contest", "Day":"Mar 1, 2025", "About": "Students submitted food photos taken on campus — dishes cooked at home, café finds, market hauls. Over 600 entries were received. The winning series, 'Breakfast at 6am,' depicted revision-week meals with striking honesty.", "Image":""}
+    ],
+    "2024": [
+        {"Name":"Bearcat Food & Ideas Festival", "Day":"Nov 9–10, 2024", "About": "A two-day festival bringing together chefs, food writers, scientists, and farmers for talks, tastings, and workshops.", "Image": ""},
+        {"Name":"Frozen Dessert Design Showcase", "Day":"Jun 7, 2024", "About": "The Art & Design faculty collaborated with the Culinary Society to create edible sculptural ice cream — flavours included Earl Grey & violet, brown butter miso, and black sesame tahini. A public vote selected the summer menu for the campus café.", "Image":""},
+        {"Name":"Big Soup Sunday", "Day":"Jan 20, 2024", "About": "A charity soup-a-thon running from 10am to 10pm. Volunteers made and served 48 different soups continuously, raising $8,500 for student hardship funds. The event sold out of bread rolls by noon.", "Image":""}
+    ],
+    "2023": [
+        {"Name":"Hot Sauce Hustle: Student Hot Sauce Competition", "Day":"Oct 14, 2023", "About": "Students submitted homemade hot sauces judged on heat, flavour complexity, and label design. 'Ghost of Deadline Past' by a 2nd-year Chemistry student won all three categories and is now stocked in the campus shop.", "Image":""},
+        {"Name":"The Lander Community Cookbook, Vol. 1", "Day":"May 2023", "About": "Three years in the making: a 120-recipe cookbook compiled entirely from student, staff and alumni submissions. Recipes span 47 countries of origin. All proceeds funded scholarships for food science students from underrepresented backgrounds.", "Image":""},
+        {"Name":"Noodle Nations Invitational", "Day":"Feb 25, 2023", "About": "Seven universities sent student teams to compete in a noodle-making relay race combining speed, technique, and flavour. Lander University's own 'Ramen Raiders' placed second.", "Image":""}
+    ],
+    "2022": [
+        {"Name":"Lander University Night Market Launch", "Day":"Sep 29, 2022", "About": "A new monthly street food market opened on campus, run jointly with Elmwood Borough Council and local food entrepreneurs. Student food business pitches were featured alongside established vendors.", "Image":""},
+        {"Name":"Inter-Faculty Bake-Off Championships", "Day":"Jun 18, 2022", "About": "Twelve faculties, twelve cakes. Engineering's structurally ambitious seven-tier gravity cake collapsed spectacularly during judging but won the crowd's heart. Law School took the trophy with a near-perfect pistachio entremet.", "Image":""},
+        {"Name":"Plant Week: A Whole Week of Vegan Dining", "Day":"Apr 4–10, 2022", "About": "All campus cafeterias went 100% plant-based for seven days as part of the university's sustainability pledge. Daily themed menus ('Mediterranean Monday', 'Street Food Saturday') drew record footfall to the dining halls", "Image":""}
+    ],
+    "2021": [
+        {"Name":"Taco Fiesta & Fusion Fair", "Day":"Nov 6, 2021", "About": "Lander students constructed a continuous baguette sandwich measuring 47.3 metres — filling: smoked salmon, crème fraîche, and capers. Verified by two independent stewards. The sandwich was donated to a local shelter.", "Image":""},
+        {"Name":"Welcome Back", "Day":"Jul 22 – Aug 5, 2021", "About": "A two-week intensive run by the Food Science department covering South Carolina. Limited to 40 participants, it sold out in under 6 minutes. A waitlist of 300+ prompted a repeat in 2022.", "Image":""},
+        {"Name":"World Record Attempt: Longest Student-Made Sandwich", "Day":"Nov 6, 2021", "About": "World Record Attempt: Longest Student-Made Sandwich Lander students constructed a continuous baguette sandwich measuring 47.3 metres — filling: smoked salmon, crème fraîche, and capers. Verified by two independent stewards. The sandwich was donated to a local shelter.", "Image":""}
+    ]
+}
