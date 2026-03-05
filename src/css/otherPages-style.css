@@ -5,16 +5,8 @@
             box-sizing: border-box;
         }
 
-         html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            overflow-x: hidden;
-            position: relative;
-            background: #ffffff;
-            color: #111111;
+        .restaurant-menu-container {
+            display: flex;
         }
 
         .restaurant-menu {
@@ -26,7 +18,7 @@
         .restaurant-item {
             color: rgba(0, 0, 0, 0.85);
             text-decoration: none;
-            font-size: 16px;
+            font-size: var(--font-size);
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
@@ -34,7 +26,7 @@
         }
 
         .restaurant-item:hover {
-            color: #FFD700;
+            color: linear-gradient(135deg, #1a3ab8 0%, #0d1f7c 100%);;
             transform: translateY(-2px);
         }
 
@@ -45,7 +37,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #FFD700, #ffffff);
+            background: linear-gradient(135deg, #1a3ab8 0%, #0d1f7c 100%);
             transition: width 0.3s ease;
         }
 
@@ -54,7 +46,7 @@
         }
 
         .restaurant-item.active {
-            color: #FFD700;
+            color: linear-gradient(135deg, #1a3ab8 0%, #0d1f7c 100%);;
         }
 
         .restaurant-item.active::after {
@@ -70,14 +62,14 @@
 
         .staff-section {
             min-height: 100vh;
-            padding: 140px 40px 60px 40px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
+            padding: 140px 40px 60px;
+            background: var(--bg-section);
         }
 
         .staff-list {
             width: 100%;
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -87,18 +79,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background:  linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
-            border-radius: 20px;
+            background: var(--bg-card);
+            border-radius: var(--border-radius-card);
             padding: 30px;
             width: 100%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            transition: 0.3s ease;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             user-select: none;
         }
 
         .staff-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-card-hover);
         }
 
         .staff-info {
@@ -112,15 +104,15 @@
         }
 
         .staff-info p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
+            font-size: var(--font-size);
+            color: var(--text-muted);
             margin-bottom: 15px;
         }
 
         .staff-image {
             width: 140px;
             height: 140px;
-            border-radius: 20px;
+            border-radius: var(--border-radius-img);
             overflow: hidden;
             flex-shrink: 0;
         }
@@ -133,39 +125,52 @@
 
         .search-container {
             position: relative;
+            display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
+            margin-bottom: 15px;
+            width: 100%;
         }
 
         .search-input {
             padding: 10px 15px 10px 40px;
-            border: 1px solid #444;
+            border: 1px solid #cccccc;
             border-radius: 20px;
             font-size: var(--font-size);
+            font-family: var(--font-family);
             color: var(--text-color);
+            background: #ffffff;
             outline: none;
+            transition: border-color 0.3s ease;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .search-input:focus {
+            border-color: #1a3ab8;
         }
 
         .search-icon {
-            position: relative;
-            left: 30px;
-            bottom: -8px;
+            position: absolute;
+            left: 12px;
+            top: 50%;
             transform: translateY(-50%);
-            color: #888;
+            color: #888888;
+            pointer-events: none;
         }
 
         .filter-container {
-            position: relative;
-            left: 40%;
-            top: -39px;
-            height: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-top: 15px;
         }
 
         .dropdown {
             position: relative;
             display: inline-block;
-            margin: 0 5px;
         }
 
         .dropdown button {
@@ -175,12 +180,14 @@
             padding: 8px 18px;
             border-radius: 8px;
             font-family: var(--font-family);
+            font-size: 14px;
             font-weight: 500;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             cursor: pointer;
-            transition: all 0.1s ease;
+            transition: var(--button-gradient) 0.2s ease, transform 0.1s ease;
             display: flex;
             align-items: center;
+            gap: 8px;
         }
         
         .dropdown button i {
@@ -198,24 +205,27 @@
         .dropdown .content {
             display: none;
             position: absolute;
-            background: #333;
+            background: #333333;
             border-radius: 6px;
             padding: 10px 0;
-            top: 100%;
+            top: calc(100% + 4px);
             left: 0;
             z-index: 1001;
             min-width: 180px;
-            box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
         .dropdown .content a {
             display: flex;
             align-items: center;
+            gap: 10px;
             padding: 10px 15px;
             color: #ffffff;
             text-decoration: none;
             font-family: var(--font-family);
+            font-size: 14px;
             font-weight: 500;
+            transition: var(--button-gradient) 0.2s ease;
         }
 
         .dropdown .content a i {
@@ -225,7 +235,7 @@
         }
 
         .dropdown .content a:hover {
-            background: gray;
+            background: rgba(255, 255, 255, 0.12);
         }
 
         .dropdown:hover .content {
@@ -234,14 +244,14 @@
 
         .calendar-section {
             min-height: 100vh;
-            padding: 140px 40px 60px 40px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
+            padding: 140px 40px 60px;
+            background: var(--bg-section);
         }
 
         .calendar-list {
             width: 100%;
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -251,18 +261,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background:  linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
-            border-radius: 20px;
+            background: var(--bg-card);
+            border-radius: var(--border-radius-card);
             padding: 30px;
             width: 100%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            transition: 0.3s ease;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             user-select: none;
         }
 
         .calendar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+             transform: translateY(-5px);
+            box-shadow: var(--shadow-card-hover);
         }
 
         .calendar-info {
@@ -277,15 +287,15 @@
         }
 
         .calendar-info p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
+            font-size: var(--font-size);
+            color: var(--text-muted);
             margin-bottom: 15px;
         }
 
         .event-image {
             width: 140px;
             height: 140px;
-            border-radius: 20px;
+            border-radius: var(--border-radius-img);
             overflow: hidden;
             flex-shrink: 0;
         }
@@ -298,14 +308,14 @@
         
         .food-section {
             min-height: 100vh;
-            padding: 140px 40px 60px 40px;
-            background: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
+            padding: 140px 40px 60px;
+            background: var(--bg-section);
         }
         
         .food-list {
             width: 100%;
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -315,18 +325,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background:  linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
-            border-radius: 20px;
+            background: var(--bg-card);
+            border-radius: var(--border-radius-card);
             padding: 30px;
             width: 100%;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            transition: 0.3s ease;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             user-select: none;
         }
 
         .food-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-card-hover);
         }
 
         .food-info {
@@ -341,15 +351,15 @@
         }
 
         .food-info p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
+            font-size: var(--font-size);
+            color: var(--text-muted);
             margin-bottom: 15px;
         }
 
         .food-image {
             width: 140px;
             height: 140px;
-            border-radius: 20px;
+            border-radius: var(--border-radius-img);
             overflow: hidden;
             flex-shrink: 0;
         }
@@ -358,4 +368,74 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .restaurant-menu {
+                gap: 20px;
+            }
+
+            .staff-section,
+            .calendar-section,
+            .food-section {
+                padding: 120px 20px 40px;
+            }
+
+            .staff-card,
+            .calendar-card,
+            .food-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .staff-info,
+            .calendar-info,
+            .food-info {
+                padding-right: 0;
+                text-align: left;
+                width: 100%;
+            }
+
+            .staff-image,
+            .event-image,
+            .food-image {
+                width: 100%;
+                height: 200px;
+                border-radius: 12px;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-input {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .staff-card,
+            .calendar-card,
+            .food-card {
+                padding: 20px;
+            }
+
+            .staff-info h2,
+            .calendar-info h2,
+            .food-info h2 {
+                font-size: 20px;
+            }
+
+            .staff-info p,
+            .calendar-info p,
+            .food-info p {
+                font-size: 14px;
+            }
+
+            .dropdown button {
+                padding: 7px 14px;
+                font-size: 13px;
+            }
         }
