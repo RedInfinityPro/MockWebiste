@@ -7,6 +7,8 @@
 
         .restaurant-menu-container {
             display: flex;
+            user-select: none;
+            
         }
 
         .restaurant-menu {
@@ -18,11 +20,12 @@
         .restaurant-item {
             color: rgba(0, 0, 0, 0.85);
             text-decoration: none;
-            font-size: var(--font-size);
+            font-size: 13px;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
             padding: 8px 0;
+            user-select: grab;
         }
 
         .restaurant-item:hover {
@@ -115,6 +118,7 @@
             border-radius: var(--border-radius-img);
             overflow: hidden;
             flex-shrink: 0;
+            margin-right: 15px;
         }
 
         .staff-image img {

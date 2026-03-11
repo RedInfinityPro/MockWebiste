@@ -45,12 +45,12 @@
         : "";
 
       card.innerHTML = `
+        ${imageHTML}
         <div class="staff-info">
           <h2>${escapeHTML(Name)}</h2>
           <h4>Department: ${escapeHTML(Department)}</h4>
           ${aboutHTML}
         </div>
-        ${imageHTML}
       `;
 
       list.appendChild(card);
