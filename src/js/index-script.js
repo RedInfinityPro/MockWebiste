@@ -46,32 +46,32 @@ https://templatemo.com/tm-595-3d-coverflow
             {
                 title: "The Underground in Grier Center",
                 description: "All-you-can-eat dining option.",
-                hours: "Monday - Friday: 7:00AM - 7:00PM | Saturday - Sunday: Close"
+                hours: "Monday - Thursday: 7:00AM - 9:00PM | Friday: 7:00AM - 8:00PM | Saturday: 9:30AM - 8:00PM | Sunday: 9:30AM - 9:00PM"
             },
             {
                 title: "Chick-fil-A",
                 description: "Chick-fil-A focuses on providing memorable experiences by ensuring quality food and friendly service.",
-                hours: "Monday - Friday: 7:30AM-10:00PM | Saturday - Sunday: Close"
+                hours: "Monday - Thursday: 7:30AM - 10:00PM | Friday: 7:30AM - 8:30PM | Saturday - Sunday: Closed"
             },
             {
                 title: "The Drop",
                 description: "It will offer a variety of meals ordered via mobile or kiosk, with multiple restaurant options.",
-                hours: "Monday - Friday: 10:30AM-4:30PM | Saturday - Sunday: Close"
+                hours: "Monday - Thursday: 7:30AM - 10:00PM | Friday: 7:30AM - 8:30PM | Saturday - Sunday: Close"
             },
             {
                 title: "Freshens",
                 description: "The restaurant offers fresh items like flatbreads and smoothies, and has received positive feedback.",
-                hours: "Monday - Friday: 8:00AM - 4:00PM | Saturday - Sunday: Close"
+                hours: "Monday - Friday: 8:00AM - 4:00PM | Saturday - Sunday: Closed"
             },
             {
                 title: "Starbucks",
                 description: "Starbucks focuses on high-quality coffee, values its partners, and aims to positively impact communities and the environment",
-                hours: "Monday - Friday: 7:30AM - 11:00PM | Saturday - Sunday: Close"
+                hours: "Monday - Thursday: 7:30AM - 11:00PM | Friday: 7:30AM - 7:30PM | Saturday: 8:30AM - 4:30PM | Sunday: 4:30PM - 11:00PMM"
             },
             {
                 title: "Greenwood Marketplace",
                 description: "Lander University opens Greenwood Marketplace for students and staff.",
-                hours: "Monday - Friday: 7:30AM - 7:30PM | Saturday - Sunday: Close"
+                hours: "Monday - Thursday: 7:30AM - 7:20PM | Friday: 7:30AM - 4:30PM | Saturday - Sunday: Closed"
             }, 
             {
                 title: "Bear Necessities Food Pantry",
