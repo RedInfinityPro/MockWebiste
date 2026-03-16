@@ -39,7 +39,8 @@
             <a href="index.html#contact" class="menu-item">Contact</a>
             <a href="calendar.html" class="menu-item active">Calendar</a>
             <a href="staff.html" class="menu-item">Staff</a>
-            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
+            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer"
+                class="menu-item external">GitHub</a>
         </nav>
 
         <div class="menu-toggle" id="menuToggle">
@@ -53,23 +54,21 @@
         <div class="calendar-list">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search...">
-                <div class="filter-container">
-                <div class="dropdown">
+                <input type="text" class="search-input" placeholder="Search..." id="calendarSearch">
+                <div class="dropdown" style="margin-left: 10px;">
                     <button><i class="fas fa-filter"></i> Filter</button>
-                    <div class="content">
-                        <a href="#"><i class="fas fa-sort-alpha-down"></i> A-Z</a>
-                        <a href="#"><i class="fas fa-sort-alpha-up"></i> Z-A</a>
-                        <a href="#"><i class="fas fa-clock"></i> New-Old</a>
-                        <a href="#"><i class="fas fa-history"></i> Old-New</a>
+                    <div class="content" id="calendarFilter">
+                        <a href="#" data-sort="az"><i class="fas fa-sort-alpha-down"></i> A-Z</a>
+                        <a href="#" data-sort="za"><i class="fas fa-sort-alpha-up"></i> Z-A</a>
+                        <a href="#" data-sort="new"><i class="fas fa-clock"></i> New-Old</a>
+                        <a href="#" data-sort="old"><i class="fas fa-history"></i> Old-New</a>
                     </div>
                 </div>
+                <!-- calendar items -->
             </div>
-            <!-- calendar items -->
-        </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-copyright">

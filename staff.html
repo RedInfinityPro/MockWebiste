@@ -53,20 +53,18 @@
         <div class="staff-list">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search...">
-                <div class="filter-container">
-                <div class="dropdown">
+                <input type="text" class="search-input" placeholder="Search..." id="staffSearch">
+                <div class="dropdown" style="margin-left: 10px;">
                     <button><i class="fas fa-filter"></i> Filter</button>
-                    <div class="content">
-                        <a href="#"><i class="fas fa-sort-alpha-down"></i> Name: A-Z</a>
-                        <a href="#"><i class="fas fa-sort-alpha-up"></i> Name: Z-A</a>
-                        <a href="#"><i class="fas fa-sort-alpha-down"></i> Career: A-Z</a>
-                        <a href="#"><i class="fas fa-sort-alpha-up"></i> Career: Z-A</a>
+                    <div class="content" id="staffFilter">
+                        <a href="#" data-sort="az-name"><i class="fas fa-sort-alpha-down"></i> A-Z Name</a>
+                        <a href="#" data-sort="za-name"><i class="fas fa-sort-alpha-up"></i> Z-A Name</a>
+                        <a href="#" data-sort="az-dept"><i class="fas fa-sort-alpha-down"></i> A-Z Department</a>
+                        <a href="#" data-sort="za-dept"><i class="fas fa-sort-alpha-up"></i> Z-A Department</a>
                     </div>
                 </div>
+                <!-- staff items -->
             </div>
-            <!-- Staff Member -->
-        </div>
     </section>
 
      <!-- Footer -->
