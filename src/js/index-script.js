@@ -126,7 +126,6 @@ https://templatemo.com/tm-595-3d-coverflow
                     translateX(${translateX}px) 
                     translateZ(${translateZ}px) 
                     rotateY(${rotateY}deg)
-                    scale(${scale})
                 `;
                 item.style.opacity = opacity;
                 item.style.zIndex = 100 - absOffset;
@@ -141,7 +140,7 @@ https://templatemo.com/tm-595-3d-coverflow
             const currentData = imageData[currentIndex];
             currentTitle.textContent = currentData.title;
             currentDescription.textContent = currentData.description;
-            currentHours.textContent = currentData.hours;
+            renderHours(currentData.hours);
             
             currentTitle.style.animation = 'none';
             currentDescription.style.animation = 'none';
@@ -393,3 +392,26 @@ https://templatemo.com/tm-595-3d-coverflow
     { total: 0, count: 0 },
     { total: 0, count: 0 }
 ];
+
+function renderHours(hoursString) {
+    if (!hoursString) {
+        currentHours.innerHTML = '';
+        return;
+    }
+    const segments = hoursString.split('|').map(s => s.trim());
+    currentHours.innerHTML = '<div class="hours-bar">' +
+        segments.map(seg => {
+            const [days, times] = seg.split(':').map(s => s.trim());
+            // find first colon that's part of the time (after the day label)
+            const colonIdx = seg.indexOf(':');
+            const dayPart = seg.substring(0, colonIdx).trim();
+            const timePart = seg.substring(colonIdx + 1).trim();
+            const isClosed = timePart.toLowerCase().includes('close');
+            return `<div class="hours-chip${isClosed ? ' closed' : ''}">
+                <span class="day-label">${dayPart}</span>
+                <span class="divider"></span>
+                <span class="time-val">${timePart}</span>
+            </div>`;
+        }).join('') +
+    '</div>';
+}

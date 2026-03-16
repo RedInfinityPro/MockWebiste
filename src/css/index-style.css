@@ -210,6 +210,7 @@
             position: relative;
             width: 100%;
             height: 400px;
+            margin-top: -60px;
         }
 
         .coverflow-item {
@@ -352,18 +353,60 @@
 
         .info-hours {
             position: absolute;
-            top: 590px;
+            top: 570px;
             left: 50%;
             transform: translateX(-50%);
-            color: white;
-            text-align: center;
             z-index: 200;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
         }
 
-        .info-hours p {
-            font-size: 16px;
-            opacity: 0.7;
+        .hours-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.06);
+            border: 0.5px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            max-width: 760px;
         }
+
+        .hours-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.08);
+            border: 0.5px solid rgba(255,255,255,0.18);
+            border-radius: 8px;
+            padding: 5px 12px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .hours-chip .day-label {
+            color: #FFD700;
+            font-weight: 500;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .hours-chip .divider {
+            width: 1px;
+            height: 12px;
+            background: rgba(255,255,255,0.25);
+        }
+
+        .hours-chip .time-val {
+            color: rgba(255,255,255,0.88);
+        }
+
+        .hours-chip.closed .time-val { color: rgba(255,255,255,0.4); }
+        .hours-chip.closed .day-label { color: rgba(255,215,0,0.45); }
 
         @keyframes fadeIn {
             to {
