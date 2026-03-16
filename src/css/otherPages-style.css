@@ -5,64 +5,6 @@
             box-sizing: border-box;
         }
 
-        .restaurant-menu-container {
-            display: flex;
-            user-select: none;
-            
-        }
-
-        .restaurant-menu {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .restaurant-item {
-            color: rgba(0, 0, 0, 0.85);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 8px 0;
-            user-select: grab;
-        }
-
-        .restaurant-item:hover {
-            color: linear-gradient(135deg, #1a3ab8 0%, #0d1f7c 100%);;
-            transform: translateY(-2px);
-        }
-
-        .restaurant-item::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #1a3ab8 0%, #0d1f7c 100%);
-            transition: width 0.3s ease;
-        }
-
-        .restaurant-item:hover::after {
-            width: 100%;
-        }
-
-        .restaurant-item.active {
-            color: linear-gradient(135deg, #1a3ab8 0%, #0d1f7c 100%);;
-        }
-
-        .restaurant-item.active::after {
-            width: 100%;
-        }
-
-        .restaurant-item.external::before {
-            content: '↗';
-            margin-right: 5px;
-            font-size: 12px;
-            opacity: 0.7;
-        }
-
         .staff-section {
             min-height: 100vh;
             padding: 140px 40px 60px;
@@ -272,6 +214,7 @@
             box-shadow: var(--shadow-card);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             user-select: none;
+            cursor: pointer;
         }
 
         .calendar-card:hover {

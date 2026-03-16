@@ -1,4 +1,7 @@
-{
+{   
+    "10000": [
+        {"Name": "", "Day": "", "About": "Add event", "Image": ""}
+    ],
     "2026": [
         {"Name":"Food & Ideas Festival", "Day":"Mar 21-22, 2026", "About": "The second annual festival expanded to include a student start-up food market, a school outreach programme, and a live cook-off between faculty heads. Ticket pre-sales exceeded last year's total attendance within 48 hours of opening.", "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm3gM7fUL2NsLX1uJDYTSqmhsAvYNZ1HGXoA&s"},
         {"Name":"Love & Dough: Valentine's Doughnut Design-Off", "Day":"Feb 14, 2026", "About": "Students competed to create the most creative glazed doughnut in honour of Valentine's Day. Entries ranged from anatomically accurate heart-shaped glazes to a surprisingly moving abstract design titled 'Long Distance.' 900 doughnuts were made and sold.", "Image":"https://hips.hearstapps.com/hmg-prod/images/krispy-kreme-2022-valentines-day-donut-collection-social-1643233674.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*"},

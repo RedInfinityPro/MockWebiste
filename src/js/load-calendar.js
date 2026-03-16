@@ -31,7 +31,7 @@
       const { Name = "Untitled Event", Day = "", About = "", Image = "" } = event;
       const card = document.createElement("div");
       card.className = "calendar-card";
-      card.setAttribute("data-staff", cardIndex);
+      card.setAttribute("data-calendar", cardIndex);
       // Build inner HTML About and Image are optional
       const aboutHTML = About
         ? `<p>${escapeHTML(About)}</p>`
@@ -47,7 +47,7 @@
       card.innerHTML = `
         <div class="calendar-info">
           <h2>${escapeHTML(Name)}</h2>
-          <h4>Day: ${escapeHTML(Day)}</h4>
+          <h4>${escapeHTML(Day)}</h4>
           ${aboutHTML}
         </div>
         ${imageHTML}
