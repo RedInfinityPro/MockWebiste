@@ -150,9 +150,6 @@ function applyFilters() {
   emptyMsg.style.display = visibleCount === 0 ? "block" : "none";
 }
 
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
-let currentSort = "";
-
 document.querySelectorAll("#calendarFilter a").forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
