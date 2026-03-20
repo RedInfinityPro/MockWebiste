@@ -24,11 +24,8 @@ function escapeHTML(str) {
   // --- Fetch data ---
   let data;
   try {
-<<<<<<< HEAD
     const response = await fetch("databases/calendar-data.json");
-=======
     const response = await fetch("./databases/calendar-data.json");
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
   } catch (err) {
