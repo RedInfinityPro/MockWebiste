@@ -8,14 +8,12 @@ Lander University's Food Program website includes a calendar section for events,
 ## Key Features 
 various meal plans, mobile ordering via the TRANSACT app, and contact information for Dining Services staff. The site also offers a navigation menu.
 
-<<<<<<< HEAD
-=======
 ## Mock Eye-Tracking Usability Test
-- Hypothesis: The website may be user-friendly as its design and layout is more modernized than the original Lander University website and contains content in an easier navigable location than the original website. To explain: Restroom hours and food plans are not easily accessible. In addition, this website allows the user to view potentially real calendar events that are not present or finable on the original website.
-- Task: To observe how the website may introduce better usage from the clients and how the user is less overwhelmed by the original lander website content and design.
+- Hypothesis: The website may be user-friendly as its design and layout are more modernized than the original Lander University website and contain content in an easier-to-navigate location than the original website. To explain: Restroom hours and food plans are not easily accessible. In addition, this website allows the user to view potentially real calendar events that are not present or available on the original website.
+- Task: To observe how the website may introduce better usage from the clients and how the user is less overwhelmed by the original landing website content and design.
 
 ### Pre-Test Setup Checklist
-☐ GP3 device centered below monitor
+☐ GP3 device centered below the monitor
 
 ☐ Lighting is even (no glare)
 
@@ -39,12 +37,11 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 ☐ Recalibrate if needed
 
 ### Immediate Post-Test Notes
-- Participant statement: According to the appearance and design of the website, it was information containing elements and information of the Lander University Program. Showcasing the TRANSACT application details and meal plans. The participant did not note any new changes or explore the fundamental elements of the website. 
-- Eye-tracking data shown: Attractive elements such as the image display allowed the user to see what restaurants and services Lander University provides to students at an easy and quick time. Based on the data, we can observe strong eye tracking data for the information regarding the TRANSACT application and the services displayed at the top of the page. THe data also indicates that the  user refused to interact with button elements and the website failed to attract the eyes for log peiords of time.
+- Participant statement: According to the appearance and design of the website, it was information containing elements and information about the Lander University Program. Showcasing the TRANSACT application details and meal plans. The participant did not note any new changes or explore the fundamental elements of the website. 
+- Eye-tracking data shown: Attractive elements such as the image display allowed the user to see what restaurants and services Lander University provides to students at an easy and quick time. Based on the data, we can observe strong eye tracking data for the information regarding the TRANSACT application and the services displayed at the top of the page. The data also indicates that the  user refused to interact with button elements, and the website failed to attract the user's eyes for long periods of time.
 - Hypothesis support: Based on the data, we can observe the most important elements attracting the eyes the most, such as the app and the services. However, based on the participants' explanation, we can determine that the website does not offer new or any additional resources that are valuable to the users. 
-- Notes: The most interesting part of the eye tracking data is the fact the client's eyes are not affected by the new image displayed in the service display element as much as originally thought. The client's eyes were not attracted to the website for long periods of time regardless of the new UI layout and design.
+- Notes: The most interesting part of the eye tracking data is the fact that the client's eyes are not affected by the new image displayed in the service display element as much as originally thought. The client's attention to the website was short-lived, even after the new UI layout and design were implemented.
 
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
 ## Project Structure
 - 📂 databases
     - 📔 calendar-data.json
@@ -96,7 +93,6 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - start.bat
 
 # Run The Website
-- If you have a Windows operating system, double click or select "run as application" in the 'start.bat' file to run the server.
-- If you have a Linux operating system (pehaps Mac OS as well), double click or select "run as application" on the 'start.sh' file to run the server.
-    - note: both server files will automatically open the webpage.
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
+- If you have a Windows operating system, double-click or select "run as application" in the 'start.bat' file to run the server.
+- If you have a Linux operating system (perhaps Mac OS as well), double click or select "run as application" on the 'start.sh' file to run the server.
+    - Note: both server files will automatically open the webpage.
