@@ -24,7 +24,11 @@ function escapeHTML(str) {
   // --- Fetch data ---
   let data;
   try {
+<<<<<<< HEAD
     const response = await fetch("databases/calendar-data.json");
+=======
+    const response = await fetch("./databases/calendar-data.json");
+>>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
   } catch (err) {
@@ -121,6 +125,32 @@ function escapeHTML(str) {
   cards.forEach(card => list.appendChild(card));
 }
 
+<<<<<<< HEAD
+=======
+function applyFilters() {
+  const query = document
+    .getElementById("calendarSearch")
+    ?.value.toLowerCase() || "";
+
+  const cards = Array.from(list.querySelectorAll(".calendar-card"));
+
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const text = card.getAttribute("data-search-text");
+
+    if (text.includes(query)) {
+      card.style.display = "";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  emptyMsg.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+>>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
 let currentSort = "";
 
 document.querySelectorAll("#calendarFilter a").forEach(link => {
