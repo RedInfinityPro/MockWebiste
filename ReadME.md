@@ -46,17 +46,14 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - 📂 databases
     - 📔 calendar-data.json
     - 📔 staff-data.json
-<<<<<<< HEAD
 - 📂 Eye Tracking Data
     - 📂 videos
         - 🎞️ GazeFlowData: 03-11-26
         - 🎞️ SpotlightMap: 03-11-26
-=======
 - 📂 eye tracking data
     - 📂 videos
         - 🎞️ gazeFlowData: 03-11-26
         - 🎞️ spotlightMap: 03-11-26
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
 - 📂 images
     - 📂 about-images
         - 📷 appImage.png
@@ -87,12 +84,10 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - load-staff.html
 - index.html
 - staff.html
-<<<<<<< HEAD
-=======
 - start.sh
 - start.bat
 
 # Run The Website
 - If you have a Windows operating system, double-click or select "run as application" in the 'start.bat' file to run the server.
-- If you have a Linux operating system (perhaps Mac OS as well), double click or select "run as application" on the 'start.sh' file to run the server.
+- If you have a Linux operating system (perhaps Mac OS as well), double-click or select "run as application" on the 'start.sh' file to run the server.
     - Note: both server files will automatically open the webpage.
