@@ -16,7 +16,7 @@ https://templatemo.com/tm-595-3d-coverflow
         const container = document.querySelector('.coverflow-container');
         const menuToggle = document.getElementById('menuToggle');
         const mainMenu = document.getElementById('mainMenu');
-        let currentIndex = 3;
+        let currentIndex = Math.floor(Math.random() * 7);
         let isAnimating = false;
 
         // Mobile menu toggle
@@ -59,14 +59,14 @@ https://templatemo.com/tm-595-3d-coverflow
                 hours: "Monday - Thursday: 7:30AM - 10:00PM | Friday: 7:30AM - 8:30PM | Saturday - Sunday: Close"
             },
             {
-                title: "Freshens",
-                description: "The restaurant offers fresh items like flatbreads and smoothies, and has received positive feedback.",
-                hours: "Monday - Friday: 8:00AM - 4:00PM | Saturday - Sunday: Closed"
-            },
-            {
                 title: "Starbucks",
                 description: "Starbucks focuses on high-quality coffee, values its partners, and aims to positively impact communities and the environment",
                 hours: "Monday - Thursday: 7:30AM - 11:00PM | Friday: 7:30AM - 7:30PM | Saturday: 8:30AM - 4:30PM | Sunday: 4:30PM - 11:00PMM"
+            },
+            {
+                title: "Freshens",
+                description: "The restaurant offers fresh items like flatbreads and smoothies, and has received positive feedback.",
+                hours: "Monday - Friday: 8:00AM - 4:00PM | Saturday - Sunday: Closed"
             },
             {
                 title: "Greenwood Marketplace",

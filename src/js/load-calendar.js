@@ -24,7 +24,6 @@ function escapeHTML(str) {
   // --- Fetch data ---
   let data;
   try {
-    const response = await fetch("databases/calendar-data.json");
     const response = await fetch("./databases/calendar-data.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
@@ -122,8 +121,6 @@ function escapeHTML(str) {
   cards.forEach(card => list.appendChild(card));
 }
 
-<<<<<<< HEAD
-=======
 function applyFilters() {
   const query = document
     .getElementById("calendarSearch")

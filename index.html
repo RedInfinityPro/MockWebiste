@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="src/css/index-style.css" rel="stylesheet">
     <link href="./src/css/index-style.css" rel="stylesheet">
 </head>
 
@@ -16,7 +16,6 @@
     <header class="header" id="header">
         <a href="#home" class="logo-container">
             <div class="logo">
-                <img src="images/logos/LanderLogo.png" width="50" height="50">
                 <img src="./images/logos/LanderLogo.png" width="50" height="50">
                 <defs>
                     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -34,17 +33,14 @@
         </a>
 
         <nav class="main-menu" id="mainMenu">
-            <a href="index.html#home" class="menu-item active">Home</a>
-            <a href="index.html#about" class="menu-item">About</a>
-            <a href="index.html#contact" class="menu-item">Contact</a>
-            <a href="calendar.html" class="menu-item">Calendar</a>
-            <a href="staff.html" class="menu-item">Staff</a>
             <a href="./index.html#home" class="menu-item active">Home</a>
             <a href="./index.html#about" class="menu-item">About</a>
             <a href="./index.html#contact" class="menu-item">Contact</a>
             <a href="./calendar.html" class="menu-item">Calendar</a>
             <a href="./staff.html" class="menu-item">Staff</a>
-            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
+            <a href="./user.html" class="menu-item"><i class="fa-solid fa-circle-user"></i></a>
+            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer"
+                class="menu-item external">GitHub</a>
         </nav>
 
         <div class="menu-toggle" id="menuToggle">
@@ -67,7 +63,8 @@
                 <div class="coverflow" id="coverflow">
                     <div class="coverflow-item" data-index="0">
                         <div class="cover image-loading">
-                            <img src="images/coverflow-images/DiningHallImage.png" alt="The Underground in Grier Center" loading="lazy">
+                            <img src="images/coverflow-images/DiningHallImage.png" alt="The Underground in Grier Center"
+                                loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
@@ -83,27 +80,29 @@
                         </div>
                         <div class="reflection"></div>
                     </div>
-                    <div class="coverflow-item" data-index="3">
-                        <div class="cover image-loading">
-                            <img src="images/coverflow-images/FreshensImage.png" alt="Freshens" loading="lazy">
-                        </div>
-                        <div class="reflection"></div>
-                    </div>
                     <div class="coverflow-item" data-index="4">
                         <div class="cover image-loading">
                             <img src="images/coverflow-images/starbucksLogo.png" alt="Starbucks" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
-                    <div class="coverflow-item" data-index="5">
+                    <div class="coverflow-item" data-index="3">
                         <div class="cover image-loading">
-                            <img src="images/coverflow-images/GreenwoodMarketplaceImage.png" alt="Greenwood Marketplace" loading="lazy">
+                            <img src="images/coverflow-images/FreshensImage.png" alt="Freshens" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="5">
                         <div class="cover image-loading">
-                            <img src="images/coverflow-images/FoodPantryImage.jpg" alt="Bear Necessities Food Pantry" loading="lazy">
+                            <img src="images/coverflow-images/GreenwoodMarketplaceImage.png" alt="Greenwood Marketplace"
+                                loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="coverflow-item" data-index="6">
+                        <div class="cover image-loading">
+                            <img src="images/coverflow-images/FoodPantryImage.jpg" alt="Bear Necessities Food Pantry"
+                                loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
@@ -112,7 +111,7 @@
                 <div class="info-hours">
                     <div id="current-hours"></div>
                 </div>
-                
+
                 <button class="nav-button prev" onclick="navigate(-1)">‹</button>
                 <button class="nav-button next" onclick="navigate(1)">›</button>
 
@@ -130,7 +129,7 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="about-content">
-            <div class="about-header">
+            <div class="section-header">
                 <h2>Choosing Your Meal Plan</h2>
                 <p>Resident students must purchase a meal plan, with several options available. Meal Exchange allows
                     swipes at various dining locations.</p>
@@ -141,7 +140,6 @@
                     <div class="showcase-display">
                         <div class="showcase-main">
                             <div class="showcase-circle-img">
-                                <img src="images/logos/All Access Plan.png" />
                                 <img src="./images/logos/All Access Plan.png" />
                             </div>
                             <div class="corner-decoration top-left"></div>
@@ -149,14 +147,11 @@
                             <h3 class="showcase-title">All Access Plan</h3>
                             <p class="showcase-subtitle">Total Cost: $2,820 per semester</p>
                             <div class="showcase-badges">
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">Unlimited Access</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">20 Meal Exchanges</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">10 Visitor Meals</a>
-                                <a href=""
-                                    target="_blank" rel="noopener noreferrer" class="badge">$100 Bearcat Bucks</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">Unlimited Access</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">20 Meal Exchanges</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">10 Visitor Meals</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">$100 Bearcat
+                                    Bucks</a>
                             </div>
                         </div>
                     </div>
@@ -166,7 +161,6 @@
                     <div class="showcase-display">
                         <div class="showcase-main">
                             <div class="showcase-circle-img">
-                                <img src="images/logos/165 Plan.png" />
                                 <img src="./images/logos/165 Plan.png" />
                             </div>
                             <div class="corner-decoration top-left"></div>
@@ -175,14 +169,11 @@
                             <p class="showcase-subtitle">Total Cost: $2,820 per semester</p>
                             <p class="showcase-subtitle">No more than 5 times in one day in the Dining Hall</p>
                             <div class="showcase-badges">
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">145 Swipes</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">20 Meal Exchange</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">10 Visitor Meals</a>
-                                <a href=""
-                                    target="_blank" rel="noopener noreferrer" class="badge">$450 Bearcat Bucks</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">145 Swipes</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">20 Meal Exchange</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">10 Visitor Meals</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">$450 Bearcat
+                                    Bucks</a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +183,6 @@
                     <div class="showcase-display">
                         <div class="showcase-main">
                             <div class="showcase-circle-img">
-                                <img src="images/logos/100 Plan.png" />
                                 <img src="./images/logos/100 Plan.png" />
                             </div>
                             <div class="corner-decoration top-left"></div>
@@ -201,14 +191,11 @@
                             <p class="showcase-subtitle">Total Cost: $1,830 per semester</p>
                             <p class="showcase-subtitle">No more than 5 times in one day in the Dining Hall</p>
                             <div class="showcase-badges">
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">90 Swipes</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">10 Meal Exchange</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">5 Visitor Meals</a>
-                                <a href=""
-                                    target="_blank" rel="noopener noreferrer" class="badge">$350 Bearcat Bucks</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">90 Swipes</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">10 Meal Exchange</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">5 Visitor Meals</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">$350 Bearcat
+                                    Bucks</a>
                             </div>
                         </div>
                     </div>
@@ -218,7 +205,6 @@
                     <div class="showcase-display">
                         <div class="showcase-main">
                             <div class="showcase-circle-img">
-                                <img src="images/logos/50 Plan.png" />
                                 <img src="./images/logos/50 Plan.png" />
                             </div>
                             <div class="corner-decoration top-left"></div>
@@ -227,12 +213,10 @@
                             <p class="showcase-subtitle">Total Cost: $1,100 per semester</p>
                             <p class="showcase-subtitle">No more than 5 times in one day in the Dining Hall</p>
                             <div class="showcase-badges">
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">50 Swipes</a>
-                                <a href="" target="_blank"
-                                    rel="noopener noreferrer" class="badge">10 Meal Exchange</a>
-                                <a href=""
-                                    target="_blank" rel="noopener noreferrer" class="badge">$275 Bearcat Bucks</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">50 Swipes</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">10 Meal Exchange</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">$275 Bearcat
+                                    Bucks</a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +226,6 @@
                     <div class="showcase-display">
                         <div class="showcase-main">
                             <div class="showcase-circle-img">
-                                <img src="images/logos/350 Plan.png" />
                                 <img src="./images/logos/350 Plan.png" />
                             </div>
                             <div class="corner-decoration top-left"></div>
@@ -250,18 +233,65 @@
                             <h3 class="showcase-title">350 Block Plan</h3>
                             <p class="showcase-subtitle">Total Cost: $350 per semester</p>
                             <div class="showcase-badges">
-                                <a href=""
-                                    target="_blank" rel="noopener noreferrer" class="badge">$350 Bearcat Bucks</a>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="badge">$350 Bearcat
+                                    Bucks</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Events section  -->
+    <section id="events" class="section">
+        <div class="events-content">
+            <div class="section-header">
+                <h2>Calendar</h2>
+                <div class="events-item" onclick="window.location.href='calendar.html'">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 16H5V9h14v11z" />
+                        </svg>
+                    </div>
+                    <div class="events-text">
+                        <h4>View Our calendar</h4>
+                        <p>Feel free to make your own event.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events-main">
+                <div class="events-visual">
+                    <div class="events-showcase-display">
+                        <div class="events-showcase-main">
+                            <div class="corner-decoration top-left"></div>
+                            <div class="corner-decoration bottom-right"></div>
+                            <div class="event-tag"><i class="fa-solid fa-gift"></i> Festival</div>
+                            <h3 class="event-title">Food & Ideas Festival</h3>
+                            <p class="event-desc">The second annual festival expanded to include a student start-up food
+                                market,
+                                a school outreach programme, and a live cook-off between faculty heads. Ticket pre-sales
+                                exceeded last year's total attendance within 48 hours of opening.</p>
+                            <div class="event-badges">
+                                <a href="#" class="badge">Live cook-off</a>
+                                <a href="#" class="badge">Faculty heads</a>
+                                <a href="#" class="badge">Total</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- app -->
+    <section id="app" class="section">
+        <div class="about-content">
             <div class="about-bottom-row">
                 <div class="about-image-panel">
                     <div class="about-image-panel-inner">
-                        <img src="images/about-images/AppImage.png" alt="Dining Experience at Lander" />
                         <img src="./images/about-images/appImage.png" alt="Dining Experience at Lander" />
                         <div class="about-image-overlay">
                             <span>Download for free</span>
@@ -270,10 +300,13 @@
                 </div>
 
                 <div class="about-info">
-                    <h3>TRANSACT Mobile Ordering App</h3>
-                    <p>Mobile Ordering offers a convenient method to order, pay, and pick up food directly from a mobile
-                        device, allowing users to browse menus and pay using credit, campus cards, or meal plans as
-                        permitted by their campus.</p>
+                    <div class="section-header">
+                        <h3>TRANSACT Mobile Ordering App</h3>
+                        <p>Mobile Ordering offers a convenient method to order, pay, and pick up food directly from a
+                            mobile
+                            device, allowing users to browse menus and pay using credit, campus cards, or meal plans as
+                            permitted by their campus.</p>
+                    </div>
                     <h2>Login with your Lander Email</h2>
                     <br>
                     <ul class="feature-list">
@@ -326,20 +359,6 @@
                             </div>
                         </div>
 
-                        <div class="contact-item" onclick="window.location.href='mailto:brannon-kristin@aramark.com'">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path
-                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p1>Kristin Brannon, Office Manager</p1>
-                                <p>brannon-kristin@aramark.com</p>
-                            </div>
-                        </div>
-                    
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <svg viewBox="0 0 24 24">
@@ -353,7 +372,8 @@
                             </div>
                         </div>
 
-                        <div class="contact-item" onclick="window.location.href='https://www.google.com/maps/place/Lander+University+-+Greenwood,+SC/@34.1994893,-82.1693028,17z/data=!3m1!4b1!4m6!3m5!1s0x88f8010ea801bc91:0x3f045de1f19854a8!8m2!3d34.1994849!4d-82.1667332!16zL20vMDM1OThs?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D'">
+                        <div class="contact-item"
+                            onclick="window.location.href='https://www.google.com/maps/place/Lander+University+-+Greenwood,+SC/@34.1994893,-82.1693028,17z/data=!3m1!4b1!4m6!3m5!1s0x88f8010ea801bc91:0x3f045de1f19854a8!8m2!3d34.1994849!4d-82.1667332!16zL20vMDM1OThs?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D'">
                             <div class="contact-icon">
                                 <svg viewBox="0 0 24 24">
                                     <path
@@ -476,7 +496,7 @@
     <div class="scroll-to-top" id="scrollToTop">
         <span>↑</span>
     </div>
-    <script src="src/js/index-script.js"></script>
+    <script src="./src/js/index-script.js"></script>
 </body>
 
 </html>

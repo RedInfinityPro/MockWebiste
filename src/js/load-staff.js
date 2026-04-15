@@ -24,11 +24,7 @@ function escapeHTML(str) {
   // --- Fetch data ---
   let data;
   try {
-<<<<<<< HEAD
-    const response = await fetch("databases/staff-data.json");
-=======
     const response = await fetch("./databases/staff-data.json");
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
   } catch (err) {
@@ -86,11 +82,7 @@ function escapeHTML(str) {
   // --- Empty state element (hidden until needed) ---
   const emptyMsg = document.createElement("p");
   emptyMsg.className = "staff-empty";
-<<<<<<< HEAD
-  emptyMsg.textContent = "No events match your search.";
-=======
   emptyMsg.textContent = "No staff match your search.";
->>>>>>> 087e32f (Final project update for the Lander University food website, adding final internal server files, updating internal path varibles and updating search bars.)
   emptyMsg.style.display = "none";
   list.after(emptyMsg);
 
