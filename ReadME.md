@@ -48,10 +48,6 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - 📂 config
     - start.bat
     - start.sh
-- 📂 includes
-    - footer.php
-    - header.php
-    - nav.php
 - 📂 public
     - 📂 assets
         - 📂 css
@@ -81,10 +77,6 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
             - load-calendar.js
             - load-staff.js
             - user-script.js
-    - calendar.php
-    - index.php
-    - staff.php
-    - user.php
 - 📂 src
     - 📂 data
         - calendar-data.json
@@ -97,6 +89,10 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
         - todo.md
 - .gitignore
 - ReadMe.md
+- calendar.html
+- index.html
+- staff.html
+- user.html
 
 # Run The Website
 - If you have a Windows operating system, double-click or select "run as application" in the 'start.bat' file to run the server.
