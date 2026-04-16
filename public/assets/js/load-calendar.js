@@ -24,7 +24,7 @@ function escapeHTML(str) {
   // --- Fetch data ---
   let data;
   try {
-    const response = await fetch("./databases/calendar-data.json");
+    const response = await fetch("./src/data/calendar-data.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
   } catch (err) {

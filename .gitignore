@@ -1,0 +1,10 @@
+.vscode/
+
+# Exclude sensitive config secrets (if you create .env later)
+.env
+config/*.bat
+config/*.sh
+
+# System files
+.DS_Store
+Thumbs.db

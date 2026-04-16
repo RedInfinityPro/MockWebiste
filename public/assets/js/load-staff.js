@@ -24,7 +24,7 @@ function escapeHTML(str) {
   // --- Fetch data ---
   let data;
   try {
-    const response = await fetch("./databases/staff-data.json");
+    const response = await fetch("./src/data/staff-data.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json();
   } catch (err) {

@@ -2,24 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>Lander University Food Program Staff</title>
+    <title>Lander University Food Program - Calendar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="src/css/index-style.css" rel="stylesheet">
-    <link href="src/css/otherPages-style.css" rel="stylesheet">
-    <link href="./src/css/index-style.css" rel="stylesheet">
-    <link href="./src/css/otherPages-style.css" rel="stylesheet">
+    <link href="./public/assets/css/index-style.css" rel="stylesheet">
+    <link href="./public/assets/css/main.css" rel="stylesheet">
+    <link href="./public/assets/css/calendar-style.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="header" id="header">
         <a href="#home" class="logo-container">
             <div class="logo">
-                <img src="./images/logos/LanderLogo.png" width="50" height="50">
+                <img src="./public/assets/img/logos/LanderLogo.png" width="50" height="50">
                 <defs>
                     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
@@ -32,17 +31,18 @@
                 <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
                 </svg>
             </div>
-            <div class="logo-text">Lander University Food Program - Staff</div>
+            <div class="logo-text">Lander University Food Program Calendar</div>
         </a>
 
         <nav class="main-menu" id="mainMenu">
-            <a href="./index.html#home" class="menu-item">Home</a>
-            <a href="./index.html#about" class="menu-item">About</a>
-            <a href="./index.html#contact" class="menu-item">Contact</a>
-            <a href="./calendar.html" class="menu-item">Calendar</a>
-            <a href="./staff.html" class="menu-item active">Staff</a>
+            <a href="./index.html" class="menu-item">Home</a>
+            <a href="./index.html" class="menu-item">About</a>
+            <a href="./index.html" class="menu-item">Contact</a>
+            <a href="./calendar.html" class="menu-item active">Calendar</a>
+            <a href="./staff.html" class="menu-item">Staff</a>
             <a href="./user.html" class="menu-item"><i class="fa-solid fa-circle-user"></i></a>
-            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
+            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer"
+                class="menu-item external">GitHub</a>
         </nav>
 
         <div class="menu-toggle" id="menuToggle">
@@ -52,25 +52,25 @@
         </div>
     </header>
 
-    <section class="staff-section">
-        <div class="staff-list">
+    <section class="calendar-section">
+        <div class="calendar-list">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search..." id="staffSearch">
+                <input type="text" class="search-input" placeholder="Search..." id="calendarSearch">
                 <div class="dropdown" style="margin-left: 10px;">
                     <button><i class="fas fa-filter"></i> Filter</button>
-                    <div class="content" id="staffFilter">
-                        <a href="#" data-sort="az-name"><i class="fas fa-sort-alpha-down"></i> A-Z Name</a>
-                        <a href="#" data-sort="za-name"><i class="fas fa-sort-alpha-up"></i> Z-A Name</a>
-                        <a href="#" data-sort="az-dept"><i class="fas fa-sort-alpha-down"></i> A-Z Department</a>
-                        <a href="#" data-sort="za-dept"><i class="fas fa-sort-alpha-up"></i> Z-A Department</a>
+                    <div class="content" id="calendarFilter">
+                        <a href="#" data-sort="az"><i class="fas fa-sort-alpha-down"></i> A-Z</a>
+                        <a href="#" data-sort="za"><i class="fas fa-sort-alpha-up"></i> Z-A</a>
+                        <a href="#" data-sort="new"><i class="fas fa-clock"></i> New-Old</a>
+                        <a href="#" data-sort="old"><i class="fas fa-history"></i> Old-New</a>
                     </div>
                 </div>
-                <!-- staff items -->
+                <!-- calendar items -->
             </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-copyright">
@@ -89,6 +89,6 @@
     <div class="scroll-to-top" id="scrollToTop">
         <span>↑</span>
     </div>
-    <script src="./src/js/index-script.js"></script>\
-    <script src="./src/js/load-staff.js"></script>
+
+    <script src="./public/assets/js/load-calendar.js"></script>
 </body>

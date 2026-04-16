@@ -43,49 +43,60 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - Notes: The most interesting part of the eye tracking data is the fact that the client's eyes are not affected by the new image displayed in the service display element as much as originally thought. The client's attention to the website was short-lived, even after the new UI layout and design were implemented.
 
 ## Project Structure
-- 📂 databases
-    - 📔 calendar-data.json
-    - 📔 staff-data.json
-- 📂 Eye Tracking Data
-    - 📂 videos
-        - 🎞️ GazeFlowData: 03-11-26
-        - 🎞️ SpotlightMap: 03-11-26
-- 📂 eye tracking data
-    - 📂 videos
-        - 🎞️ gazeFlowData: 03-11-26
-        - 🎞️ spotlightMap: 03-11-26
-- 📂 images
-    - 📂 about-images
-        - 📷 appImage.png
-    - 📂 coverflow-images
-        - 📷 Chick-fil-a-logo.png
-        - 📷 DiningHallImage.png
-        - 📷 FoodPantryImage.png
-        - 📷 FreshensImage.png
-        - 📷 GreenwoodMarketplaceImage.png
-        - 📷 starbucksLogo.png
-        - 📷 TheDropImage.png
-    - 📂 logos
-        - 📷 50 Plan.png
-        - 📷 100 Plan.png
-        - 📷 165 Plan.png
-        - 📷 350 Plan.png
-        - 📷 All Access Plan.png
-        - 📷 LanderLogo.png
-    - 📂 staff-images
+- 📂 .vscode
+    - settings.json
+- 📂 config
+    - start.bat
+    - start.sh
+- 📂 includes
+    - footer.php
+    - header.php
+    - nav.php
+- 📂 public
+    - 📂 assets
+        - 📂 css
+            - index-style.css
+            - otherPages-style.css
+            - userPage-style.css
+        - 📂 img
+            - 📂 about-images
+                - appImage.png
+            - 📂 coverflow-images
+                - Chick-fil-a-logo.png
+                - DiningHallImage.png
+                - FoodPantryImage.png
+                - GreenwoodMarketplaceImage.png
+                - StarbucksLogo.png
+                - TheDropImage.png
+            - 📂 logos
+                - landerLogo.png
+            - 📂 plans
+                - 50-plan.png
+                - 100-plan.png
+                - 165-plan.png
+                - 360-plan.png
+                - allAccessPlan.png
+        - 📂 js
+            - index-script.js
+            - load-calendar.js
+            - load-staff.js
+            - user-script.js
+    - calendar.php
+    - index.php
+    - staff.php
+    - user.php
 - 📂 src
-    - 📂 css
-        - index-style.css
-        - otherPages-style.css
-    - 📂 js
-        - index-script.js
-        - load-calendar.js
-        - load-staff.js
-- load-staff.html
-- index.html
-- staff.html
-- start.sh
-- start.bat
+    - 📂 data
+        - calendar-data.json
+        - staff-data.json
+    - 📂 research
+        - 📂 videos
+            - gazeFlowData: 03-11-26.avi
+            - spotlightMap: 03-11-26.avi
+    - 📂 tasks
+        - todo.md
+- .gitignore
+- ReadMe.md
 
 # Run The Website
 - If you have a Windows operating system, double-click or select "run as application" in the 'start.bat' file to run the server.
