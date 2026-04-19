@@ -70,6 +70,36 @@
             </div>
     </section>
 
+    <div id="createEvent" class="popup-form">
+        <div class="form-container">
+            <span class="close-btn" onclick="closeForm('createEvent')">&times;</span>
+            <h2>Create an Event</h2>
+            <form isd="eventFormContent">
+                <div class="form-group">
+                    <label for="enentEmail">Your Email</label>
+                    <input type="email" id="fEmail" name="fEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="fName" name="fName" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDay">Event Day</label>
+                    <input type="date" id="fDay" name="fName" required>
+                </div>
+                <div class="form-group">
+                    <label for="enentAbout">What is the event about</label>
+                    <textarea id="fAbout" name="fAbout"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="eventImage">Event Image</label>
+                     <input type="file" id="image-upload" name="image-upload" accept="image/*">
+                </div>
+                <button type="submit" class="btn-primary">Create Event</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

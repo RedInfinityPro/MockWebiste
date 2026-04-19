@@ -50,6 +50,10 @@ function escapeHTML(str) {
 
       const card = document.createElement("div");
       card.className = "calendar-card";
+      if (Name.toLowerCase() == "add event") {
+        card.onclick = () => showForm('createEvent');
+        card.dataset.static = "true";
+      }
       card.setAttribute("data-calendar", cardIndex);
       card.setAttribute("data-year", year);
       // Store lowercase text for search matching
@@ -91,72 +95,80 @@ function escapeHTML(str) {
 
   // --- Search + filter logic ---
   function sortCards(mode) {
-  const cards = Array.from(list.querySelectorAll(".calendar-card"));
+    const cards = Array.from(list.querySelectorAll(".calendar-card:not([data-static])"));
 
-  cards.sort((a, b) => {
-    const nameA = a.querySelector("h2").textContent.toLowerCase();
-    const nameB = b.querySelector("h2").textContent.toLowerCase();
+    cards.sort((a, b) => {
+      const nameA = a.querySelector("h2").textContent.toLowerCase();
+      const nameB = b.querySelector("h2").textContent.toLowerCase();
 
-    const yearA = Number(a.getAttribute("data-year"));
-    const yearB = Number(b.getAttribute("data-year"));
+      const yearA = Number(a.getAttribute("data-year"));
+      const yearB = Number(b.getAttribute("data-year"));
 
-    switch (mode) {
-      case "az":
-        return nameA.localeCompare(nameB);
+      switch (mode) {
+        case "az":
+          return nameA.localeCompare(nameB);
 
-      case "za":
-        return nameB.localeCompare(nameA);
+        case "za":
+          return nameB.localeCompare(nameA);
 
-      case "new":
-        return yearB - yearA;
+        case "new":
+          return yearB - yearA;
 
-      case "old":
-        return yearA - yearB;
+        case "old":
+          return yearA - yearB;
 
-      default:
-        return 0;
-    }
+        default:
+          return 0;
+      }
+    });
+
+    cards.forEach(card => list.appendChild(card));
+  }
+
+  function applyFilters() {
+    const query = document
+      .getElementById("calendarSearch")
+      ?.value.toLowerCase() || "";
+
+    const cards = Array.from(list.querySelectorAll(".calendar-card:not([data-static])"));
+
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const text = card.getAttribute("data-search-text");
+
+      if (text.includes(query)) {
+        card.style.display = "";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    emptyMsg.style.display = visibleCount === 0 ? "block" : "none";
+  }
+
+  document.querySelectorAll("#calendarFilter a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
+      currentSort = link.dataset.sort;
+
+      sortCards(currentSort);
+      applyFilters();
+    });
   });
 
-  cards.forEach(card => list.appendChild(card));
-}
-
-function applyFilters() {
-  const query = document
+  document
     .getElementById("calendarSearch")
-    ?.value.toLowerCase() || "";
+    ?.addEventListener("input", applyFilters);
 
-  const cards = Array.from(list.querySelectorAll(".calendar-card"));
+})();
 
-  let visibleCount = 0;
-
-  cards.forEach(card => {
-    const text = card.getAttribute("data-search-text");
-
-    if (text.includes(query)) {
-      card.style.display = "";
-      visibleCount++;
-    } else {
-      card.style.display = "none";
-    }
-  });
-
-  emptyMsg.style.display = visibleCount === 0 ? "block" : "none";
+function showForm(formId) {
+  document.getElementById(formId).style.display = 'block';
 }
 
-document.querySelectorAll("#calendarFilter a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-
-    currentSort = link.dataset.sort;
-
-    sortCards(currentSort);
-    applyFilters();
-  });
-});
-
-document
-  .getElementById("calendarSearch")
-  ?.addEventListener("input", applyFilters);
-  
-})();
+function closeForm(formId) {
+  document.getElementById(formId).style.display = 'none';
+}
