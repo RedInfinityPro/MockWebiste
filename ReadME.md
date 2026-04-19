@@ -76,7 +76,6 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
             - index-script.js
             - load-calendar.js
             - load-staff.js
-            - user-script.js
 - 📂 src
     - 📂 data
         - calendar-data.json
@@ -92,7 +91,6 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - calendar.html
 - index.html
 - staff.html
-- user.html
 
 # Run The Website
 - If you have a Windows operating system, double-click or select "run as application" in the 'start.bat' file to run the server.
