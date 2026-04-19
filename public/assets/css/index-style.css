@@ -9,15 +9,16 @@
     --text-muted: rgba(0, 0, 0, 0.7);
     --accent-blue-dark: #1a2a6c;
     --blue-vivid: #1c53b9;
-    --accent-gold: #ffd700;
-    --accent-gold-dark: #e6a800;
+    --accent-gold: #f5c518;
+    --accent-gold-dark: #d4a90f;
     --bg-card: linear-gradient(135deg, rgba(26, 58, 184, 0.08) 0%, rgba(13, 31, 124, 0.08) 100%);
     --bg-section: linear-gradient(135deg, #f5f7ff 0%, #eaf0ff 100%);
     --bg-dark: radial-gradient(ellipse at center, #1a2a6c 0%, #0a0a1a 100%);
     --button-gradient: linear-gradient(135deg, #ffd700 0%, #e6a800 100%);
     --button-hover: linear-gradient(135deg, #e6c200 0%, #cc9400 100%);
-    --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.55);
-    --shadow-card-hover: 0 20px 45px rgba(0, 0, 0, 0.15);
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --shadow-card-hover: 0 18px 40px rgba(0, 0, 0, 0.18);
+    --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.08);
     --shadow-blue: 0 10px 32px rgba(26, 42, 108, 0.5);
     --shadow-gold: 0 10px 30px rgba(255, 215, 0, 0.5);
     --border-radius-card: 20px;
@@ -64,7 +65,7 @@ body {
 }
 
 .section-header h2 {
-    font-size: 48px;
+    font-size: 42px;
     margin-top: 60px;
     margin-bottom: 20px;
     background: var(--gradient-blue);
@@ -74,7 +75,7 @@ body {
 }
 
 .section-header h3 {
-    font-size: 48px;
+    font-size: 42px;
     margin-top: 60px;
     margin-bottom: 20px;
     background: var(--gradient-red);
@@ -84,7 +85,7 @@ body {
 }
 
 .section-header p {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
@@ -544,6 +545,7 @@ body {
     justify-content: center;
     backdrop-filter: blur(10px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-card);
 }
 
 .showcase-circle-img {
@@ -681,16 +683,18 @@ body {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    text-align: left;
 }
 
 .events-item:hover {
     background: var(--blue-vivid);
-    transform: translateX(5px);
+    transform: translateY(-4px);
     box-shadow: 0 10px 30px var(--accent-gold-dark);
 }
 
 .events-text {
     flex: 1;
+    margin-left: 10px;
 }
 
 .events-text h4 {
@@ -760,11 +764,13 @@ body {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     user-select: none;
+    box-shadow: var(--shadow-card);
 }
 
 .events-showcase-main:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px var(--accent-blue-dark);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .event-title {
@@ -950,18 +956,19 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--button-gradient);
+    background: linear-gradient(135deg, #ffd700, #ffcc00);
     color: var(--text-color);
     text-decoration: none;
     padding: 15px 30px;
     border-radius: var(--border-radius-btn);
     font-weight: 600;
     transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.35);
 }
 
 .cta-button svg {
@@ -1173,6 +1180,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-card);
     padding: 40px;
+    box-shadow: var(--shadow-card);
 }
 
 .form-group {
@@ -1436,6 +1444,7 @@ body {
         width: 100%;
         height: 350px;
         padding: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .showcase-logo {

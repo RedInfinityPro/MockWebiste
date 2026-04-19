@@ -1,67 +1,67 @@
 @charset "utf-8";
 
-* {
-    .staff-section {
-        min-height: 100vh;
-        padding: 140px 40px 60px;
-        background: var(--bg-section);
-    }
 
-    .staff-list {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
+.staff-section {
+    min-height: 100vh;
+    padding: 140px 40px 60px;
+    background: var(--bg-section);
+}
 
-    .staff-card {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--bg-card);
-        border-radius: var(--border-radius-card);
-        padding: 30px;
-        width: 100%;
-        box-shadow: var(--shadow-card);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        user-select: none;
-    }
+.staff-list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
-    .staff-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-card-hover);
-    }
+.staff-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-card);
+    border-radius: var(--border-radius-card);
+    padding: 30px;
+    width: 100%;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
 
-    .staff-info {
-        flex: 1;
-        padding-right: 30px;
-    }
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
 
-    .staff-info h2 {
-        font-size: 26px;
-        margin-bottom: 10px;
-    }
+.staff-info {
+    flex: 1;
+    padding-right: 30px;
+}
 
-    .staff-info p {
-        font-size: var(--font-size);
-        color: var(--text-muted);
-        margin-bottom: 15px;
-    }
+.staff-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
 
-    .staff-image {
-        width: 140px;
-        height: 140px;
-        border-radius: var(--border-radius-img);
-        overflow: hidden;
-        flex-shrink: 0;
-        margin-right: 15px;
-    }
+.staff-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    flex: 1;
+}
 
-    .staff-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.staff-image {
+    width: 140px;
+    height: 140px;
+    border-radius: var(--border-radius-img);
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.staff-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

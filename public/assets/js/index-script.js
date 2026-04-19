@@ -177,12 +177,6 @@ function navigate(direction) {
     updateCoverflow();
 }
 
-function goToIndex(index) {
-    if (isAnimating || index === currentIndex) return;
-    currentIndex = index;
-    updateCoverflow();
-}
-
 // Keyboard navigation
 container.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') navigate(-1);
@@ -191,7 +185,10 @@ container.addEventListener('keydown', (e) => {
 
 // Click on items to select
 items.forEach((item, index) => {
-    item.addEventListener('click', () => goToIndex(index));
+    item.addEventListener('click', () => {
+        handleUserInteraction();
+        goToIndex(index);
+    });
 });
 
 // Touch/swipe support
@@ -425,6 +422,10 @@ function renderHours(hoursString) {
         '</div>';
 }
 
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
 (async function loadCalendarCards() {
     const list = document.querySelector(".events-showcase-display");
     if (!list) {
@@ -465,7 +466,7 @@ function renderHours(hoursString) {
     });
 
     // --- Pick 3 at random (or fewer if not enough events) ---
-    const count = Math.min(3, allEvents.length);
+    const count = Math.min(5, allEvents.length);
     const picked = [];
     const used = new Set();
     while (picked.length < count) {
@@ -512,23 +513,23 @@ function renderHours(hoursString) {
                 (word[0] === word[0].toUpperCase() || word.length >= 7)
             ) {
                 seen.add(lower);
-                highlights.push(word);
+                highlights.push(capitalizeFirstLetter(word));
             }
         });
 
-        return { summary, highlights: highlights.slice(0, 5) };
+        return { summary, highlights: highlights.slice(0, (Math.random() * 6) + 1) };
     }
 
     // --- Build cards ---
     // --- Build cards ---
     picked.forEach((event, idx) => {
-        const { Name = "Untitled Event", Day = "", About = "", Image = "", year } = event;
+        const { Name = "Untitled Event", Day = "", About = "", Image = "" } = event;
         const { summary, highlights } = summarize(About);
 
         const card = document.createElement("div");
         card.className = "events-showcase-main";
         card.setAttribute("data-calendar", idx);
-        card.setAttribute("data-year", year);
+        card.setAttribute("data-day", Day);
 
         const highlightsHTML = highlights.length
             ? highlights.map(w =>
@@ -539,7 +540,7 @@ function renderHours(hoursString) {
         card.innerHTML = `
             <div class="corner-decoration top-left"></div>
             <div class="corner-decoration bottom-right"></div>
-            <div class="event-tag"><i class="fa-solid fa-calendar-day"></i> ${escapeHTML(year)}</div>
+            <div class="event-tag"><i class="fa-solid fa-calendar-day"></i> ${escapeHTML(Day)}</div>
             <h3 class="event-title">${escapeHTML(Name)}</h3>
             <p class="event-desc">${escapeHTML(summary)}</p>
             <div class="event-badges">

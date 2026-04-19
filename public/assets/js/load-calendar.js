@@ -51,7 +51,7 @@ function escapeHTML(str) {
       const card = document.createElement("div");
       card.className = "calendar-card";
       if (Name.toLowerCase() == "add event") {
-        card.onclick = () => showForm('createEvent');
+        card.addEventListener('click', () => showForm('createEvent'));
         card.dataset.static = "true";
       }
       card.setAttribute("data-calendar", cardIndex);
