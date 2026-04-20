@@ -316,43 +316,6 @@ const menuItems = document.querySelectorAll('.menu-item');
 const header = document.getElementById('header');
 const scrollToTopBtn = document.getElementById('scrollToTop');
 
-// Update active menu item on scroll
-function updateActiveMenuItem() {
-    const scrollPosition = window.scrollY + 100;
-
-    sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            menuItems.forEach(item => {
-                if (!item.classList.contains('external')) {
-                    item.classList.remove('active');
-                }
-            });
-            if (menuItems[index] && !menuItems[index].classList.contains('external')) {
-                menuItems[index].classList.add('active');
-            }
-        }
-    });
-
-    // Header background on scroll
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-
-    // Show/hide scroll to top button
-    if (window.scrollY > 500) {
-        scrollToTopBtn.classList.add('visible');
-    } else {
-        scrollToTopBtn.classList.remove('visible');
-    }
-}
-
-window.addEventListener('scroll', updateActiveMenuItem);
-
 // Smooth scroll to section
 menuItems.forEach(item => {
     item.addEventListener('click', (e) => {
@@ -520,7 +483,6 @@ function capitalizeFirstLetter(val) {
         return { summary, highlights: highlights.slice(0, (Math.random() * 6) + 1) };
     }
 
-    // --- Build cards ---
     // --- Build cards ---
     picked.forEach((event, idx) => {
         const { Name = "Untitled Event", Day = "", About = "", Image = "" } = event;

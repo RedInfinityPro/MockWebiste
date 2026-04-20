@@ -2,9 +2,9 @@
 
 
 .staff-section {
-    min-height: 100vh;
-    padding: 140px 40px 60px;
-    background: var(--bg-section);
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .staff-list {
@@ -42,11 +42,16 @@
 .staff-info h2 {
     font-size: 32px;
     font-weight: 700;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
 }
 
 .staff-info p {
     font-size: 15px;
-    color: var(--text-muted);
+    color: var(--text-color-muted);
     line-height: 1.75;
     flex: 1;
 }

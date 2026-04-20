@@ -1,54 +1,5 @@
 @charset "utf-8";
 
-/* HEADER */
-.page-section {
-    background: var(--accent-blue-dark);
-    min-height: 30vh;
-    padding: 140px 20px 80px;
-    user-select: none;
-}
-
-/* SPEED BADGE */
-.speed-strip {
-    background: var(--bg-card);
-    padding: 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    user-select: none;
-}
-
-.speed-strip span {
-    text-decoration: none;
-    font-size: 16px;
-    color: #1A1A18;
-    flex-direction: row;
-}
-
-.speed-dot {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.85);
-}
-
-.speed-dot::before {
-    content: '✓';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background: var(--button-gradient);
-    border-radius: 50%;
-    flex-shrink: 0;
-    color: var(--text-color-color);
-    font-weight: 700;
-}
-
 /* TOOLS GRID */
 .tools-section {
     padding: 40px;
@@ -57,7 +8,6 @@
 }
 
 .tools-section h2 {
-    font-family: 'DM Serif Display', serif;
     font-size: 32px;
     font-weight: 700;
     color: var(--text-color);
@@ -178,6 +128,7 @@
     color: var(--text-color-muted);
     line-height: 1.75;
     flex: 1;
+    margin-bottom: 10px;
 }
 
 .no-login-tag {
@@ -235,6 +186,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
     justify-content: center;
+    cursor: pointer;
 }
 
 .open-btn:hover {
@@ -256,6 +208,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(255, 0, 0, 0.25);
     justify-content: center;
+    cursor: pointer;
 }
 
 .open-btn.secondary:hover {
@@ -270,23 +223,8 @@
     flex: 1;
     padding: 1.25px;
     gap: 1rem;
-}
-
-/* CLOSE */
-.close-btn {
-    align-self: flex-end;
-    background: var(--white-full);
-    border: none;
-    border-radius: 6px;
-    padding: 0.3rem 0.7rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-color-muted);
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    background: var(--white-mid);
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
 /* TOOL: BALANCE TRACKER */
@@ -607,6 +545,7 @@ select:focus {
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(255, 0, 0, 0.25);
     justify-content: center;
+    cursor: pointer;
 }
 
 .report-btn:hover {
@@ -615,13 +554,13 @@ select:focus {
 }
 
 /* TOOL: MENU TODAY */
-.menu-tabs {
+.foodMenu-tabs {
     display: flex;
     gap: 0.4rem;
     margin-bottom: 0.75rem;
 }
 
-.menu-tab {
+.foodMenu-tab {
     flex: 1;
     background: var(--surface2);
     border: 1.5px solid var(--border);
@@ -635,31 +574,36 @@ select:focus {
     transition: all 0.15s;
 }
 
-.menu-tab:hover {
+.foodMenu-tab:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-soft);
 }
 
-.menu-tab.on {
+.foodMenu-tab.on {
     background: var(--accent-gold);
     border-color: var(--accent-gold);
     color: var(--text-color);
 }
 
-.menu-item {
+.foodMenu-item {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     padding: 0.4rem 0;
     border-bottom: 1px solid var(--border);
     font-size: 0.82rem;
+    user-select: none;
 }
 
-.menu-item:last-child {
+.foodMenu-item:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.foodMenu-item:last-child {
     border-bottom: none;
 }
 
-.menu-dot {
+.foodMenu-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -678,12 +622,12 @@ select:focus {
     background: var(--accent3);
 }
 
-.menu-name {
+.foodMenu-name {
     flex: 1;
     color: var(--text-color);
 }
 
-.menu-tag {
+.foodMenu-tag {
     font-size: 0.68rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -691,7 +635,7 @@ select:focus {
     color: var(--text-muted);
 }
 
-.menu-legend {
+.foodMenu-legend {
     display: flex;
     gap: 0.75rem;
     font-size: 0.7rem;
@@ -699,7 +643,7 @@ select:focus {
     margin-top: 0.5rem;
 }
 
-.menu-legend span {
+.foodMenu-legend span {
     display: flex;
     align-items: center;
     gap: 0.3rem;

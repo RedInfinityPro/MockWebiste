@@ -89,9 +89,9 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
     - 📂 tasks
         - todo.md
 - .gitignore
-- ReadMe.md
 - calendar.html
 - index.html
+- ReadMe.md
 - staff.html
 - tools.html
 
