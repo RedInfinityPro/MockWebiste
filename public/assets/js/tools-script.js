@@ -240,7 +240,7 @@ function currencyLabel(key) {
 }
 
 function reportWait() {
-    showForm('reportPrice');
+    showForm('reportTime');
     // const loc = prompt('Which location?');
     // if (!loc) return;
     // const mins = prompt('Approximate wait in minutes?');
