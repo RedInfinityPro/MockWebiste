@@ -51,9 +51,10 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - 📂 public
     - 📂 assets
         - 📂 css
+            - calendar-style.css
             - index-style.css
-            - otherPages-style.css
-            - userPage-style.css
+            - main-style.css
+            - tools-style.css
         - 📂 img
             - 📂 about-images
                 - appImage.png
@@ -76,6 +77,7 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
             - index-script.js
             - load-calendar.js
             - load-staff.js
+            - tools-script.js
 - 📂 src
     - 📂 data
         - calendar-data.json
@@ -91,6 +93,7 @@ various meal plans, mobile ordering via the TRANSACT app, and contact informatio
 - calendar.html
 - index.html
 - staff.html
+- tools.html
 
 # Run The Website
 - If you have a Windows operating system, double-click or select "run as application" in the 'start.bat' file to run the server.

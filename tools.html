@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lander University Food Program</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./public/assets/css/index-style.css" rel="stylesheet">
+    <link href="./public/assets/css/main.css" rel="stylesheet">
+    <link href="./public/assets/css/tools-style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="#home" class="logo-container">
+            <div class="logo">
+                <img src="./public/assets/img/logos/LanderLogo.png" width="50" height="50">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#e4dd00e2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect x="10" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(-15 17.5 50)" />
+                <rect x="35" y="15" width="15" height="70" fill="url(#grad1)" />
+                <rect x="60" y="25" width="15" height="50" fill="url(#grad1)" transform="rotate(15 67.5 50)" />
+                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
+                </svg>
+            </div>
+            <div class="logo-text">Lander University Food Program</div>
+        </a>
+
+        <nav class="main-menu" id="mainMenu">
+            <a href="./index.html#home" class="menu-item">Home</a>
+            <a href="./index.html#about" class="menu-item">About</a>
+            <a href="./index.html#contact" class="menu-item">Contact</a>
+            <a href="./calendar.html" class="menu-item">Calendar</a>
+            <a href="./tools.html" class="menu-item active">Tools</a>
+            <a href="./staff.html" class="menu-item">Staff</a>
+            <a href="https://github.com/RedInfinityPro/MockWebiste" target="_blank" rel="noopener noreferrer"
+                class="menu-item external">GitHub</a>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="page-section">
+        <div class="info">
+            <h2>Student Meal Tools</h2>
+            <p>Everything you need, instantly. No accounts required for most tools — just tap and go.</p>
+            <hr width="100%" size="2" style="margin-top: 10px; margin-bottom: 10px; color: transparent;">
+        </div>
+    </section>
+
+    <div class="speed-strip">
+        <div class="speed-dot"></div>
+        <span>Designed for the lunch line</span>
+        <div class="speed-dot"></div>
+        <span>Most tools work in under 10 seconds</span>
+        <div class="speed-dot"></div>
+        <span>5 of 6 tools require zero login</span>
+    </div>
+
+    <div class="tools-section">
+        <div class="tools-grid">
+            <div class="tool-card" id="card-wait">
+                <div class="card-header">
+                    <div class="card-icon icon-red">🕐</div>
+                    <div class="card-meta">
+                        <h3>Live Wait Times</h3>
+                        <p>See crowding at each dining location right now</p>
+                    </div>
+                    <span class="no-login-tag">No Login</span>
+                </div>
+                <div class="card-preview">
+                    <p class="preview-hint">Tap to see estimated wait times across all dining halls and quick-service
+                        spots.</p>
+                    <button class="open-btn" onclick="openCard('wait')">Open Tool →</button>
+                </div>
+                <div class="card-body" id="body-wait">
+                    <button class="close-btn" onclick="closeCard('wait')">✕ Close</button>
+                    <div class="location-list" id="wait-list">
+                        <!-- populated by JS -->
+                    </div>
+                    <p class="last-updated" id="wait-updated"></p>
+                    <button class="report-btn" onclick="reportWait()">📍 Report a wait time</button>
+                </div>
+            </div>
+
+            <!-- TOOL 2: TODAY'S MENU -->
+            <div class="tool-card" id="card-menu">
+                <div class="card-header">
+                    <div class="card-icon icon-green">🥗</div>
+                    <div class="card-meta">
+                        <h3>Today's Menu</h3>
+                        <p>Browse what's being served at each meal period</p>
+                    </div>
+                    <span class="no-login-tag">No Login</span>
+                </div>
+                <div class="card-preview">
+                    <p class="preview-hint">Quickly check what's for breakfast, lunch, or dinner before heading over.
+                    </p>
+                    <button class="open-btn" onclick="openCard('menu')">Open Tool →</button>
+                </div>
+                <div class="card-body" id="body-menu">
+                    <button class="close-btn" onclick="closeCard('menu')">✕ Close</button>
+                    <div class="menu-tabs">
+                        <div class="menu-tab on" onclick="switchMeal('breakfast', this)">Breakfast</div>
+                        <div class="menu-tab on" onclick="switchMeal('continentalBreakfast', this)">Continental Breakfast</div>
+                        <div class="menu-tab" onclick="switchMeal('lunch', this)">Lunch</div>
+                        <div class="menu-tab" onclick="switchMeal('lateLunch', this)">Late Lunch</div>
+                        <div class="menu-tab" onclick="switchMeal('dinner', this)">Dinner</div>
+                    </div>
+                    <div id="menu-items" class="price-list"></div>
+                    <div class="menu-legend">
+                        <span><span
+                                style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#2D5A3D;"></span>
+                            Vegetarian</span>
+                        <span><span
+                                style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#E8A23A;"></span>
+                            Gluten-free</span>
+                        <span><span
+                                style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#C84B32;"></span>
+                            Contains meat</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOOL 3: SCHEDULE PLANNER -->
+            <div class="tool-card" id="card-schedule">
+                <div class="card-header">
+                    <div class="card-icon icon-blue">📅</div>
+                    <div class="card-meta">
+                        <h3>Weekly Meal Planner</h3>
+                        <p>Build your eat schedule around your plan type</p>
+                    </div>
+                    <span class="no-login-tag">No Login</span>
+                </div>
+                <div class="card-preview">
+                    <p class="preview-hint">Pick your plan and class days — get a personalized eating schedule to budget
+                        swipes through the week.</p>
+                    <button class="open-btn" onclick="openCard('schedule')">Open Tool →</button>
+                </div>
+                <div class="card-body" id="body-schedule">
+                    <button class="close-btn" onclick="closeCard('schedule')">✕ Close</button>
+                    <select id="plan-select" onchange="rebuildSchedule()">
+                        <option value="">— Select your meal plan —</option>
+                        <option value="7">All Access Plan (unlimited)</option>
+                        <option value="10">165 Block Plan (145 swipes/semester)</option>
+                        <option value="14">100 Block Plan (90 swipes/semester)</option>
+                        <option value="14">50 Block Plan (50 swipes/semester)</option>
+                        <option value="14">350 Block Plan (0 swipes/semester)</option>
+                    </select>
+                    <div id="day-rows" style="display:flex;flex-direction:column;gap:0.45rem;"></div>
+                    <div class="schedule-output" id="sched-output">← Select a plan and days above to generate your
+                        schedule.</div>
+                </div>
+            </div>
+
+            <!-- TOOL 4: PRICE LOOKUP -->
+            <div class="tool-card" id="card-price">
+                <div class="card-header">
+                    <div class="card-icon icon-amber">💰</div>
+                    <div class="card-meta">
+                        <h3>Price Lookup</h3>
+                        <p>Community-reported prices for campus food items</p>
+                    </div>
+                    <span class="no-login-tag">No Login</span>
+                </div>
+                <div class="card-preview">
+                    <p class="preview-hint">Find what items cost before you get to the register. Prices reported and
+                        upvoted by students.</p>
+                    <button class="open-btn" onclick="openCard('price')">Open Tool →</button>
+                </div>
+                <div class="card-body" id="body-price">
+                    <button class="close-btn" onclick="closeCard('price')">✕ Close</button>
+                    <div class="price-search-row">
+                        <input type="text" id="price-search" placeholder="Search item (e.g. burger, coffee...)"
+                            oninput="filterPrices()" />
+                    </div>
+                    <div class="price-list" id="price-list"></div>
+                    <button class="open-btn secondary" onclick="addPricePrompt()" style="margin-top:0.25rem;">+ Report a
+                        price</button>
+                </div>
+            </div>
+
+            <!-- TOOL 5: BALANCE TRACKER -->
+            <div class="tool-card" id="card-balance">
+                <div class="card-header">
+                    <div class="card-icon icon-teal">💳</div>
+                    <div class="card-meta">
+                        <h3>Balance Tracker</h3>
+                        <p>Track swipes, exchanges & dining dollars locally</p>
+                    </div>
+                    <span class="login-tag">Optional Login</span>
+                </div>
+                <div class="card-preview">
+                    <p class="preview-hint">Enter your balances manually — saved in your browser. No account needed to
+                        use this quick tracker.</p>
+                    <button class="open-btn" onclick="openCard('balance')">Open Tool →</button>
+                </div>
+                <div class="card-body" id="body-balance">
+                    <button class="close-btn" onclick="closeCard('balance')">✕ Close</button>
+                    <div class="balance-grid">
+                        <div class="balance-tile">
+                            <div class="val" id="b-swipes">—</div>
+                            <div class="lbl">Meal Swipes</div>
+                        </div>
+                        <div class="balance-tile">
+                            <div class="val" id="b-exchange">—</div>
+                            <div class="lbl">Exchanges</div>
+                        </div>
+                        <div class="balance-tile">
+                            <div class="val" id="b-guest">—</div>
+                            <div class="lbl">Guest Passes</div>
+                        </div>
+                        <div class="balance-tile">
+                            <div class="val" id="b-dollars">—</div>
+                            <div class="lbl">Bearcat $</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:0.45rem;">
+                        <div class="balance-input-row">
+                            <label>Swipes</label>
+                            <input type="number" min="0" placeholder="0" id="in-swipes" oninput="updateBalance()" />
+                        </div>
+                        <div class="balance-input-row">
+                            <label>Exchanges</label>
+                            <input type="number" min="0" placeholder="0" id="in-exchange" oninput="updateBalance()" />
+                        </div>
+                        <div class="balance-input-row">
+                            <label>Guest passes</label>
+                            <input type="number" min="0" placeholder="0" id="in-guest" oninput="updateBalance()" />
+                        </div>
+                        <div class="balance-input-row">
+                            <label>Bearcat $</label>
+                            <input type="number" min="0" step="0.01" placeholder="0.00" id="in-dollars"
+                                oninput="updateBalance()" />
+                        </div>
+                    </div>
+                    <p style="font-size:0.72rem;color:var(--text-light);">Saved locally in your browser. Not connected
+                        to your account.</p>
+                </div>
+            </div>
+
+            <!-- TOOL 6: PLAN VALUE ESTIMATOR -->
+            <div class="tool-card" id="card-plan">
+                <div class="card-header">
+                    <div class="card-icon icon-purple">📊</div>
+                    <div class="card-meta">
+                        <h3>Plan Value Estimator</h3>
+                        <p>See how far each plan goes for your lifestyle</p>
+                    </div>
+                    <span class="no-login-tag">No Login</span>
+                </div>
+                <div class="card-preview">
+                    <p class="preview-hint">Compare meal plans side by side and find which gives you the best value per
+                        week.</p>
+                    <button class="open-btn" onclick="openCard('plan')">Open Tool →</button>
+                </div>
+                <div class="card-body" id="body-plan">
+                    <button class="close-btn" onclick="closeCard('plan')">✕ Close</button>
+                    <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.25rem;">How many meals do you
+                        typically eat per day?</div>
+                    <input type="range" min="1" max="3" step="1" value="2" id="meals-per-day" oninput="updatePlan()"
+                        style="width:100%;"/>
+                    <div
+                        style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-light);margin-top:-0.2rem;margin-bottom:0.5rem;">
+                        <span>1 meal</span><span>2 meals</span><span>3 meals</span>
+                    </div>
+                    <div class="plan-chips" id="plan-chips">
+                        <div class="plan-chip on" onclick="selectPlan('AllAccessPlan', this)" data-plan="AllAccessPlan">All Access Plan</div>
+                        <div class="plan-chip" onclick="selectPlan('BlockPlan165', this)" data-plan="BlockPlan165">165 Block Plan</div>
+                        <div class="plan-chip" onclick="selectPlan('BlockPlan100', this)" data-plan="BlockPlan100">100 Block Plan</div>
+                        <div class="plan-chip" onclick="selectPlan('BlockPlan50', this)" data-plan="BlockPlan50">50 Block Plan</div>
+                        <div class="plan-chip" onclick="selectPlan('BlockPlan350', this)" data-plan="BlockPlan350">350 Block Plan</div>
+                    </div>
+                    <div class="plan-details" id="plan-detail"></div>
+                    <div class="savings-callout" id="plan-savings"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./public/assets/js/tools-script.js"></script>
+</body>
+    
+</html>

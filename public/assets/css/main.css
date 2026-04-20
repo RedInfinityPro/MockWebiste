@@ -1,4 +1,17 @@
 @charset "utf-8";
+:root {
+    --text-light: rgba(0, 0, 0, 0.5);
+    --radius-sm: 10px;
+    --border: #DDD9D0;
+    --surface2: rgba(0, 0, 0, 0.03);
+    --success-bg: rgba(45, 90, 61, 0.1);
+    --warning-bg: rgba(139, 94, 16, 0.1);
+    --danger-bg: rgba(139, 32, 32, 0.1);
+    --text-light: #9B9B90;
+    --accent2: #E8A23A;
+    --accent3: #C84B32;
+    --surface2: #F0EDE6;
+}
 
 * {
     .search-container {
