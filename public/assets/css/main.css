@@ -193,98 +193,107 @@
     .popup-form {
         display: none;
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(10px);
+        inset: 0;
+        background: rgba(10, 15, 40, 0.65);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         z-index: 1000;
         overflow-y: auto;
+        animation: fadeIn 0.2s var(--ease-smooth);
     }
 
     .form-container {
-        background-color: var(--popup-color);
+        background: #1e2340;
         width: 90%;
-        max-width: 400px;
-        margin: 2rem auto;
-        padding: 2rem;
-        border-radius: 8px;
+        max-width: 420px;
+        margin: 3rem auto;
+        padding: 2.2rem;
+        border-radius: var(--radius-lg);
         position: relative;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        animation: scaleIn 0.25s var(--ease-spring) both;
     }
 
     .close-btn {
         position: absolute;
-        top: 12px;
-        right: 14px;
-        font-size: 22px;
+        top: 14px;
+        right: 16px;
+        font-size: 20px;
         cursor: pointer;
-        color: white;
-        transition: all 0.3s ease;
+        color: rgba(135, 135, 135, 0.5);
+        transition: color var(--dur-base), transform var(--dur-base) var(--ease-spring);
         user-select: none;
         border: none;
         background: transparent;
-        color: darkred;
     }
 
     .close-btn:hover {
-        transform: rotate(90deg);
-        color: #ff4d4d;
+        transform: rotate(90deg) scale(1.15);
+        color: #ff5a5a;
     }
 
     .form-container h2 {
-        margin-bottom: 20px;
-        color: white;
+        margin-bottom: 22px;
+        color: var(--white);
         text-align: center;
-    }
-
-    .form-group {
-        margin-bottom: 16px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 6px;
-        color: white;
-        font-size: 14px;
+        font-family: var(--font-display);
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
     }
 
     form input,
     form select,
     form textarea {
         width: 100%;
-        padding: 12px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        color: white;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1.5px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius-sm);
+        color: var(--white);
         font-size: 14px;
-        transition: all 0.25s ease;
+        font-family: var(--font-body);
+        transition: border-color var(--dur-base), background var(--dur-base), box-shadow var(--dur-base);
+    }
+
+    form input::placeholder,
+    form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.28);
     }
 
     form input:focus,
     form select:focus,
     form textarea:focus {
         outline: none;
-        border-color: var(--accent-gold);
-        background: rgba(255, 255, 255, 0.08);
+        border-color: var(--gold);
+        background: rgba(245, 197, 24, 0.06);
+        box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.12);
     }
 
     .btn-primary {
         width: 100%;
-        padding: 12px;
-        background: var(--button-gradient);
-        color: var(--text-color);
+        padding: 13px;
+        background: var(--grad-gold);
+        color: var(--ink);
         border: none;
-        border-radius: var(--border-radius-btn);
-        font-weight: 600;
-
-        transition: all 0.25s ease;
+        border-radius: var(--radius-btn);
+        font-weight: 700;
+        font-size: 15px;
+        font-family: var(--font-body);
+        cursor: pointer;
+        transition: transform var(--dur-base) var(--ease-spring),
+            box-shadow var(--dur-base) var(--ease-smooth);
+        box-shadow: 0 6px 20px var(--gold-glow);
     }
 
     .btn-primary:hover {
         transform: translateY(-2px);
         box-shadow: var(--shadow-gold);
+    }
+
+    .btn-primary:active {
+        transform: translateY(0);
     }
 
     @media (max-width: 768px) {

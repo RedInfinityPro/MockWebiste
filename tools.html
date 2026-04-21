@@ -31,7 +31,7 @@
                 <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5" />
                 </svg>
             </div>
-            <div class="logo-text">Lander University Food Program</div>
+            <div class="logo-text">Lander University Food Program Tools</div>
         </a>
 
          <nav class="main-menu" id="mainMenu">
@@ -75,7 +75,7 @@
                     <button class="open-btn" onclick="openCard('wait')">Open Tool →</button>
                 </div>
                 <div class="card-body" id="body-wait">
-                    <button class="close-btn" onclick="closeCard('wait')">X</button>
+                    <button class="close-btn" onclick="closeCard('wait')">x</button>
                     <div class="location-list" id="wait-list">
                         <!-- populated by JS -->
                     </div>
@@ -100,7 +100,7 @@
                     <button class="open-btn" onclick="openCard('menu')">Open Tool →</button>
                 </div>
                 <div class="card-body" id="body-menu">
-                    <button class="close-btn" onclick="closeCard('menu')">X</button>
+                    <button class="close-btn" onclick="closeCard('menu')">x</button>
                     <div class="foodMenu-tabs">
                         <div class="foodMenu-tab on" onclick="switchMeal('breakfast', this)">Breakfast</div>
                         <div class="foodMenu-tab on" onclick="switchMeal('continentalBreakfast', this)">Continental Breakfast</div>
@@ -139,7 +139,7 @@
                     <button class="open-btn" onclick="openCard('schedule')">Open Tool →</button>
                 </div>
                 <div class="card-body" id="body-schedule">
-                    <button class="close-btn" onclick="closeCard('schedule')">X</button>
+                    <button class="close-btn" onclick="closeCard('schedule')">x</button>
                     <select id="plan-select" onchange="rebuildSchedule()">
                         <option value="">— Select your meal plan —</option>
                         <option value="AllAccessPlan">All Access Plan (unlimited)</option>
@@ -170,7 +170,7 @@
                     <button class="open-btn" onclick="openCard('price')">Open Tool →</button>
                 </div>
                 <div class="card-body" id="body-price">
-                    <button class="close-btn" onclick="closeCard('price')">X</button>
+                    <button class="close-btn" onclick="closeCard('price')">x</button>
                     <div class="price-search-row">
                         <input type="text" id="price-search" placeholder="Search item (e.g. burger, coffee...)"
                             oninput="filterPrices()" />
@@ -197,7 +197,7 @@
                     <button class="open-btn" onclick="openCard('balance')">Open Tool →</button>
                 </div>
                 <div class="card-body" id="body-balance">
-                    <button class="close-btn" onclick="closeCard('balance')">X</button>
+                    <button class="close-btn" onclick="closeCard('balance')">x</button>
                     <div class="balance-grid">
                         <div class="balance-tile">
                             <div class="val" id="b-swipes">—</div>
@@ -256,7 +256,7 @@
                     <button class="open-btn" onclick="openCard('plan')">Open Tool →</button>
                 </div>
                 <div class="card-body" id="body-plan">
-                    <button class="close-btn" onclick="closeCard('plan')">X</button>
+                    <button class="close-btn" onclick="closeCard('plan')">x</button>
                     <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.25rem;">How many meals do you
                         typically eat per day?</div>
                     <input type="range" min="1" max="3" step="1" value="2" id="meals-per-day" oninput="updatePlan()"
